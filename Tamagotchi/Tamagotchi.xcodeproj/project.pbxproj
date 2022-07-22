@@ -13,6 +13,9 @@
 		BD8333B5288A916900683E3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD8333B3288A916900683E3E /* Main.storyboard */; };
 		BD8333B7288A916D00683E3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD8333B6288A916D00683E3E /* Assets.xcassets */; };
 		BD8333BA288A916D00683E3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD8333B8288A916D00683E3E /* LaunchScreen.storyboard */; };
+		BD8333C3288A92BC00683E3E /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD8333C2288A92BC00683E3E /* IQKeyboardManagerSwift */; };
+		BD8333C6288A92CD00683E3E /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = BD8333C5288A92CD00683E3E /* Toast */; };
+		BD8333C9288A92DF00683E3E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BD8333C8288A92DF00683E3E /* Lottie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD8333C6288A92CD00683E3E /* Toast in Frameworks */,
+				BD8333C3288A92BC00683E3E /* IQKeyboardManagerSwift in Frameworks */,
+				BD8333C9288A92DF00683E3E /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,11 @@
 			dependencies = (
 			);
 			name = Tamagotchi;
+			packageProductDependencies = (
+				BD8333C2288A92BC00683E3E /* IQKeyboardManagerSwift */,
+				BD8333C5288A92CD00683E3E /* Toast */,
+				BD8333C8288A92DF00683E3E /* Lottie */,
+			);
 			productName = Tamagotchi;
 			productReference = BD8333AA288A916900683E3E /* Tamagotchi.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,11 @@
 				Base,
 			);
 			mainGroup = BD8333A1288A916900683E3E;
+			packageReferences = (
+				BD8333C1288A92BC00683E3E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				BD8333C4288A92CD00683E3E /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				BD8333C7288A92DF00683E3E /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = BD8333AB288A916900683E3E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -360,6 +376,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BD8333C1288A92BC00683E3E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.5.0;
+			};
+		};
+		BD8333C4288A92CD00683E3E /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		BD8333C7288A92DF00683E3E /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD8333C2288A92BC00683E3E /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD8333C1288A92BC00683E3E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		BD8333C5288A92CD00683E3E /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD8333C4288A92CD00683E3E /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
+		BD8333C8288A92DF00683E3E /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD8333C7288A92DF00683E3E /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BD8333A2288A916900683E3E /* Project object */;
 }
