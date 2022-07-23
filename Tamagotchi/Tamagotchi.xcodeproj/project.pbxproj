@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD7E0AE4288B9828000C31DF /* NameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD7E0AE3288B9828000C31DF /* NameViewController.storyboard */; };
+		BD7E0AE6288B9834000C31DF /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7E0AE5288B9834000C31DF /* NameViewController.swift */; };
+		BD7E0AEC288B986E000C31DF /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD7E0AEB288B986E000C31DF /* MainViewController.storyboard */; };
+		BD7E0AEE288B988D000C31DF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7E0AED288B988D000C31DF /* MainViewController.swift */; };
+		BD7E0AF0288B98A3000C31DF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7E0AEF288B98A3000C31DF /* DetailViewController.swift */; };
+		BD7E0AF4288B98BE000C31DF /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD7E0AF3288B98BE000C31DF /* DetailViewController.storyboard */; };
+		BD7E0AF6288B98C7000C31DF /* SelectViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD7E0AF5288B98C7000C31DF /* SelectViewController.storyboard */; };
+		BD7E0AF8288B98CE000C31DF /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7E0AF7288B98CE000C31DF /* SelectViewController.swift */; };
+		BD7E0AFA288B98F3000C31DF /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7E0AF9288B98F3000C31DF /* SettingViewController.swift */; };
+		BD7E0AFC288B9905000C31DF /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD7E0AFB288B9905000C31DF /* SettingViewController.storyboard */; };
 		BD8333AE288A916900683E3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8333AD288A916900683E3E /* AppDelegate.swift */; };
 		BD8333B0288A916900683E3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8333AF288A916900683E3E /* SceneDelegate.swift */; };
-		BD8333B2288A916900683E3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8333B1288A916900683E3E /* ViewController.swift */; };
 		BD8333B5288A916900683E3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD8333B3288A916900683E3E /* Main.storyboard */; };
 		BD8333B7288A916D00683E3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD8333B6288A916D00683E3E /* Assets.xcassets */; };
 		BD8333BA288A916D00683E3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD8333B8288A916D00683E3E /* LaunchScreen.storyboard */; };
@@ -19,10 +28,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD7E0AE3288B9828000C31DF /* NameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NameViewController.storyboard; sourceTree = "<group>"; };
+		BD7E0AE5288B9834000C31DF /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		BD7E0AEB288B986E000C31DF /* MainViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainViewController.storyboard; sourceTree = "<group>"; };
+		BD7E0AED288B988D000C31DF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BD7E0AEF288B98A3000C31DF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BD7E0AF3288B98BE000C31DF /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
+		BD7E0AF5288B98C7000C31DF /* SelectViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectViewController.storyboard; sourceTree = "<group>"; };
+		BD7E0AF7288B98CE000C31DF /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
+		BD7E0AF9288B98F3000C31DF /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		BD7E0AFB288B9905000C31DF /* SettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingViewController.storyboard; sourceTree = "<group>"; };
 		BD8333AA288A916900683E3E /* Tamagotchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tamagotchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD8333AD288A916900683E3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD8333AF288A916900683E3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BD8333B1288A916900683E3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BD8333B4288A916900683E3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD8333B6288A916D00683E3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD8333B9288A916D00683E3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,6 +61,104 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD7E0AD8288B9635000C31DF /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				BD8333AD288A916900683E3E /* AppDelegate.swift */,
+				BD8333AF288A916900683E3E /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		BD7E0AD9288B9640000C31DF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BD7E0ADA288B9644000C31DF /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				BD7E0AE2288B9794000C31DF /* Name */,
+				BD7E0AE1288B9791000C31DF /* Setting */,
+				BD7E0AE0288B977B000C31DF /* Main */,
+				BD7E0ADF288B9774000C31DF /* Detail */,
+				BD7E0ADE288B973B000C31DF /* Select */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		BD7E0ADB288B964E000C31DF /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				BD8333B6288A916D00683E3E /* Assets.xcassets */,
+				BD8333B3288A916900683E3E /* Main.storyboard */,
+				BD8333B8288A916D00683E3E /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		BD7E0ADC288B965E000C31DF /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				BD8333BB288A916D00683E3E /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		BD7E0ADD288B9661000C31DF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BD7E0ADE288B973B000C31DF /* Select */ = {
+			isa = PBXGroup;
+			children = (
+				BD7E0AF5288B98C7000C31DF /* SelectViewController.storyboard */,
+				BD7E0AF7288B98CE000C31DF /* SelectViewController.swift */,
+			);
+			path = Select;
+			sourceTree = "<group>";
+		};
+		BD7E0ADF288B9774000C31DF /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				BD7E0AF3288B98BE000C31DF /* DetailViewController.storyboard */,
+				BD7E0AEF288B98A3000C31DF /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		BD7E0AE0288B977B000C31DF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BD7E0AEB288B986E000C31DF /* MainViewController.storyboard */,
+				BD7E0AED288B988D000C31DF /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BD7E0AE1288B9791000C31DF /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				BD7E0AFB288B9905000C31DF /* SettingViewController.storyboard */,
+				BD7E0AF9288B98F3000C31DF /* SettingViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		BD7E0AE2288B9794000C31DF /* Name */ = {
+			isa = PBXGroup;
+			children = (
+				BD7E0AE3288B9828000C31DF /* NameViewController.storyboard */,
+				BD7E0AE5288B9834000C31DF /* NameViewController.swift */,
+			);
+			path = Name;
+			sourceTree = "<group>";
+		};
 		BD8333A1288A916900683E3E = {
 			isa = PBXGroup;
 			children = (
@@ -62,13 +178,12 @@
 		BD8333AC288A916900683E3E /* Tamagotchi */ = {
 			isa = PBXGroup;
 			children = (
-				BD8333AD288A916900683E3E /* AppDelegate.swift */,
-				BD8333AF288A916900683E3E /* SceneDelegate.swift */,
-				BD8333B1288A916900683E3E /* ViewController.swift */,
-				BD8333B3288A916900683E3E /* Main.storyboard */,
-				BD8333B6288A916D00683E3E /* Assets.xcassets */,
-				BD8333B8288A916D00683E3E /* LaunchScreen.storyboard */,
-				BD8333BB288A916D00683E3E /* Info.plist */,
+				BD7E0AD8288B9635000C31DF /* Application */,
+				BD7E0ADD288B9661000C31DF /* Common */,
+				BD7E0AD9288B9640000C31DF /* Data */,
+				BD7E0ADA288B9644000C31DF /* Presentation */,
+				BD7E0ADB288B964E000C31DF /* Resource */,
+				BD7E0ADC288B965E000C31DF /* Support */,
 			);
 			path = Tamagotchi;
 			sourceTree = "<group>";
@@ -141,9 +256,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD7E0AFC288B9905000C31DF /* SettingViewController.storyboard in Resources */,
+				BD7E0AF4288B98BE000C31DF /* DetailViewController.storyboard in Resources */,
+				BD7E0AE4288B9828000C31DF /* NameViewController.storyboard in Resources */,
 				BD8333BA288A916D00683E3E /* LaunchScreen.storyboard in Resources */,
 				BD8333B7288A916D00683E3E /* Assets.xcassets in Resources */,
 				BD8333B5288A916900683E3E /* Main.storyboard in Resources */,
+				BD7E0AF6288B98C7000C31DF /* SelectViewController.storyboard in Resources */,
+				BD7E0AEC288B986E000C31DF /* MainViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,9 +274,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD8333B2288A916900683E3E /* ViewController.swift in Sources */,
 				BD8333AE288A916900683E3E /* AppDelegate.swift in Sources */,
 				BD8333B0288A916900683E3E /* SceneDelegate.swift in Sources */,
+				BD7E0AF8288B98CE000C31DF /* SelectViewController.swift in Sources */,
+				BD7E0AF0288B98A3000C31DF /* DetailViewController.swift in Sources */,
+				BD7E0AE6288B9834000C31DF /* NameViewController.swift in Sources */,
+				BD7E0AFA288B98F3000C31DF /* SettingViewController.swift in Sources */,
+				BD7E0AEE288B988D000C31DF /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +429,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W7P3R7ZL78;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Tamagotchi/Info.plist;
+				INFOPLIST_FILE = Tamagotchi/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -334,7 +458,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W7P3R7ZL78;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Tamagotchi/Info.plist;
+				INFOPLIST_FILE = Tamagotchi/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
