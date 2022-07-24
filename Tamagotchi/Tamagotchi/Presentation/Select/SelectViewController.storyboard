@@ -17,19 +17,59 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="teb-QP-fZq">
-                            <size key="itemSize" width="128" height="128"/>
+                            <size key="itemSize" width="192" height="243"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hRe-vj-n6M">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TamagotchiCollectionViewCell" id="hRe-vj-n6M" customClass="TamagotchiCollectionViewCell" customModule="Tamagotchi" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="192" height="243"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Auz-d9-IDU">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="192" height="243"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dGF-Zd-OeP">
+                                            <rect key="frame" x="0.0" y="0.0" width="192" height="192"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="dGF-Zd-OeP" secondAttribute="height" id="de3-bQ-NWa"/>
+                                            </constraints>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIZ-MO-1zO">
+                                            <rect key="frame" x="0.0" y="192" width="192" height="51"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NameNameNameName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FF1-se-uCq">
+                                                    <rect key="frame" x="20" y="15" width="152" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="FF1-se-uCq" firstAttribute="leading" secondItem="mIZ-MO-1zO" secondAttribute="leading" constant="20" id="19t-Ph-jQE"/>
+                                                <constraint firstItem="FF1-se-uCq" firstAttribute="centerY" secondItem="mIZ-MO-1zO" secondAttribute="centerY" id="3CR-bR-XTE"/>
+                                                <constraint firstAttribute="trailing" secondItem="FF1-se-uCq" secondAttribute="trailing" constant="20" id="lFI-JG-eHd"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="dGF-Zd-OeP" secondAttribute="trailing" id="0fu-C0-VbT"/>
+                                        <constraint firstItem="dGF-Zd-OeP" firstAttribute="leading" secondItem="Auz-d9-IDU" secondAttribute="leading" id="8uj-1c-VNU"/>
+                                        <constraint firstAttribute="bottom" secondItem="mIZ-MO-1zO" secondAttribute="bottom" id="Adr-rs-Hmf"/>
+                                        <constraint firstItem="dGF-Zd-OeP" firstAttribute="top" secondItem="Auz-d9-IDU" secondAttribute="top" id="GCW-nW-QNk"/>
+                                        <constraint firstAttribute="trailing" secondItem="mIZ-MO-1zO" secondAttribute="trailing" id="GSK-w6-EO8"/>
+                                        <constraint firstItem="mIZ-MO-1zO" firstAttribute="top" secondItem="dGF-Zd-OeP" secondAttribute="bottom" id="TvZ-m9-XVP"/>
+                                        <constraint firstItem="mIZ-MO-1zO" firstAttribute="leading" secondItem="Auz-d9-IDU" secondAttribute="leading" id="WYu-bw-V34"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
+                                <size key="customSize" width="192" height="243"/>
+                                <connections>
+                                    <outlet property="nameContainerView" destination="mIZ-MO-1zO" id="zjl-r1-WbP"/>
+                                    <outlet property="nameLabel" destination="FF1-se-uCq" id="cyL-qW-L7E"/>
+                                    <outlet property="profileImageView" destination="dGF-Zd-OeP" id="cDX-h5-Z2N"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -40,7 +80,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5FI-dI-jtF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-651" y="117"/>
+            <point key="canvasLocation" x="-652.17391304347836" y="116.51785714285714"/>
         </scene>
     </scenes>
     <resources>
