@@ -52,6 +52,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="165.5" height="44"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="취소"/>
+                                                <connections>
+                                                    <action selector="cancelButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="g1k-Lg-S8h"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxI-mw-Qmk">
                                                 <rect key="frame" x="165.5" y="0.0" width="165.5" height="44"/>

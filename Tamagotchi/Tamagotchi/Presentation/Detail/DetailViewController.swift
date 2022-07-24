@@ -39,4 +39,8 @@ final class DetailViewController: UIViewController {
         self.startButton.layer.borderColor = Color.pointColor.cgColor
         self.startButton.layer.borderWidth = 0.5
     }
+    
+    @IBAction func cancelButtonTapped(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
 }
