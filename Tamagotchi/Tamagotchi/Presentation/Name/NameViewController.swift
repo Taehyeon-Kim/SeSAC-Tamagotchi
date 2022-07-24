@@ -16,6 +16,7 @@ final class NameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureTextField()
+        self.configureNavigationBar()
     }
 }
 
@@ -25,5 +26,14 @@ extension NameViewController {
         self.nameTextField.text = name
         self.nameTextField.textColor = Color.pointColor
         self.nameTextField.drawUnderLine()
+    }
+    
+    private func configureNavigationBar() {
+        self.title = "\(name ?? "대장")님의 이름 정하기"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "저장", style: .plain, target: self, action: #selector(saveButtonTapped))
+    }
+    
+    @objc func saveButtonTapped() {
+        
     }
 }
