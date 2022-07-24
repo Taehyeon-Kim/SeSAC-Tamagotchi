@@ -66,9 +66,16 @@ extension SettingViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if SettingOption.allCases[indexPath.row] == .name {
+        switch SettingOption.allCases[indexPath.row] {
+        case .name:
             guard let nameViewController = UIStoryboard(name: "NameViewController", bundle: nil).instantiateViewController(withIdentifier: "NameViewController") as? NameViewController else { return }
             self.navigationController?.pushViewController(nameViewController, animated: true)
+        case .tamagotchi:
+            return
+        case .data:
+            let cancelAction = UIAlertAction(title: "아니", style: .cancel, handler: nil)
+            let confirmAction = UIAlertAction(title: "응", style: .default, handler: nil)
+            self.makeAlert(title: "데이터 초기화", message: "정말 다시 처음부터 시작하실 건가요?", cancelAction: cancelAction, confirmAction: confirmAction)
         }
     }
 }
