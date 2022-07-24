@@ -42,6 +42,13 @@ final class SelectViewController: UICollectionViewController {
         cell.configureData(self.tamagotchiList[indexPath.row])
         return cell
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let detailViewController = UIStoryboard(name: "DetailViewController", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
+        detailViewController.modalPresentationStyle = .overFullScreen
+        detailViewController.modalTransitionStyle = .crossDissolve
+        self.present(detailViewController, animated: true)
+    }
 }
 
 extension SelectViewController {
