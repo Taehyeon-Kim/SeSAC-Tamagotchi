@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SelectViewController: UIViewController {
+final class SelectViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
