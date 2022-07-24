@@ -9,7 +9,7 @@ import UIKit
 
 final class SettingViewController: UITableViewController {
     
-    private enum SettingOption: CaseIterable {
+    private enum SettingOption: Int, CaseIterable {
         case name, tamagotchi, data
         
         var image: UIImage? {
@@ -63,6 +63,13 @@ extension SettingViewController {
         cell.textLabel?.text = SettingOption.allCases[indexPath.row].title
         cell.detailTextLabel?.text = SettingOption.allCases[indexPath.row].detail
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if SettingOption.allCases[indexPath.row] == .name {
+            guard let nameViewController = UIStoryboard(name: "NameViewController", bundle: nil).instantiateViewController(withIdentifier: "NameViewController") as? NameViewController else { return }
+            self.navigationController?.pushViewController(nameViewController, animated: true)
+        }
     }
 }
 
