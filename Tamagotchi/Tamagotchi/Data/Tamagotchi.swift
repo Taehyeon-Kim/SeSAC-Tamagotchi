@@ -8,7 +8,7 @@
 import UIKit
 
 struct Tamagotchi {
-    private var type: TamagotchiType
+    var type: TamagotchiType
     var profileImage: UIImage?  {
         return type.profileImage
     }
