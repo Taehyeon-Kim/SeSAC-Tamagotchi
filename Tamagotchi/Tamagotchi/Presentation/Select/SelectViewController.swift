@@ -18,7 +18,24 @@ final class SelectViewController: UICollectionViewController {
         self.configureNavigationBar()
         self.configureCollectionView()
     }
+}
+
+// MARK: - Methods
+
+extension SelectViewController {
+    private func configureUI() {
+        self.collectionView.backgroundColor = .clear
+        self.view.backgroundColor = Color.backgroundColor
+    }
     
+    private func configureNavigationBar() {
+        self.title = "다마고치 선택하기"
+    }
+}
+
+// MARK: - CollectionView Methods
+
+extension SelectViewController {
     private func configureCollectionView() {
         let layout = UICollectionViewFlowLayout()
         let width = UIScreen.main.bounds.width - (spacing * 4)
@@ -52,16 +69,5 @@ final class SelectViewController: UICollectionViewController {
             detailViewController.modalTransitionStyle = .crossDissolve
             self.present(detailViewController, animated: true)
         }
-    }
-}
-
-extension SelectViewController {
-    private func configureUI() {
-        self.collectionView.backgroundColor = .clear
-        self.view.backgroundColor = Color.backgroundColor
-    }
-    
-    private func configureNavigationBar() {
-        self.title = "다마고치 선택하기"
     }
 }
