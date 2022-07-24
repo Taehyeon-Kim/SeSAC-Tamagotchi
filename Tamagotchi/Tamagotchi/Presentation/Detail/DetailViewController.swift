@@ -43,4 +43,14 @@ final class DetailViewController: UIViewController {
     @IBAction func cancelButtonTapped(_ sender: UIButton) {
         self.dismiss(animated: true)
     }
+    
+    @IBAction func startButtonTapped(_ sender: UIButton) {
+        let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        let sceneDelegate = windowScene?.delegate as? SceneDelegate
+       
+        guard let rootViewController = UIStoryboard(name: "MainViewController", bundle: nil).instantiateViewController(withIdentifier: "MainViewController") as? MainViewController else { return }
+
+        sceneDelegate?.window?.rootViewController = UINavigationController(rootViewController: rootViewController)
+        sceneDelegate?.window?.makeKeyAndVisible()
+    }
 }

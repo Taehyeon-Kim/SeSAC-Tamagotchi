@@ -60,6 +60,9 @@
                                                 <rect key="frame" x="165.5" y="0.0" width="165.5" height="44"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="시작하기"/>
+                                                <connections>
+                                                    <action selector="startButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1qt-w7-LCP"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
