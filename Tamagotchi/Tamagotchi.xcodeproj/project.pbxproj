@@ -27,6 +27,7 @@
 		BD8333C6288A92CD00683E3E /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = BD8333C5288A92CD00683E3E /* Toast */; };
 		BD8333C9288A92DF00683E3E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BD8333C8288A92DF00683E3E /* Lottie */; };
 		BDFFE3BA288D46D0002F75D9 /* TamagotchiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3B9288D46D0002F75D9 /* TamagotchiCollectionViewCell.swift */; };
+		BDFFE3BC288D4DC5002F75D9 /* TamagotchiType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3BB288D4DC5002F75D9 /* TamagotchiType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		BD8333B9288A916D00683E3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD8333BB288A916D00683E3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDFFE3B9288D46D0002F75D9 /* TamagotchiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagotchiCollectionViewCell.swift; sourceTree = "<group>"; };
+		BDFFE3BB288D4DC5002F75D9 /* TamagotchiType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagotchiType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		BD7E0ADD288B9661000C31DF /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BDFFE3BB288D4DC5002F75D9 /* TamagotchiType.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDFFE3BC288D4DC5002F75D9 /* TamagotchiType.swift in Sources */,
 				BDFFE3BA288D46D0002F75D9 /* TamagotchiCollectionViewCell.swift in Sources */,
 				BD8333AE288A916900683E3E /* AppDelegate.swift in Sources */,
 				BD8333B0288A916900683E3E /* SceneDelegate.swift in Sources */,
