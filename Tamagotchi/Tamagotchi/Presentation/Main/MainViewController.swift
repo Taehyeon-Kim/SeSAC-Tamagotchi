@@ -42,6 +42,7 @@ extension MainViewController {
         self.waterDropTextField.placeholder = "물주세요"
         [self.riceTextField, self.waterDropTextField].forEach {
             $0?.textAlignment = .center
+            $0?.drawUnderLine()
         }
         [self.riceButton, self.waterDropButton].forEach {
             $0?.setTitleColor(Color.pointColor, for: .normal)
@@ -57,6 +58,8 @@ extension MainViewController {
     }
     
     @objc func transitionToSettingViewController() {
-        
+        guard let settingViewController = UIStoryboard(name: "SettingViewController", bundle: nil).instantiateViewController(withIdentifier: "SettingViewController") as? SettingViewController else { return }
+        self.navigationItem.backButtonTitle = ""
+        self.navigationController?.pushViewController(settingViewController, animated: true)
     }
 }
