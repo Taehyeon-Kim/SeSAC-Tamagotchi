@@ -11,6 +11,7 @@ final class SettingViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureNavigationBar()
     }
 }
 
@@ -25,5 +26,11 @@ extension SettingViewController {
         }
         
         return cell
+    }
+}
+
+extension SettingViewController {
+    private func configureNavigationBar() {
+        self.title = "설정"
     }
 }
