@@ -23,36 +23,36 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3-8" translatesAutoresizingMaskIntoConstraints="NO" id="PF5-Xk-9yI">
-                                <rect key="frame" x="124" y="279" width="166" height="166"/>
+                                <rect key="frame" x="103.5" y="279" width="207" height="207"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PF5-Xk-9yI" secondAttribute="height" multiplier="1:1" id="eOZ-if-BUJ"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUR-Bx-213" customClass="CustomPaddingLabel" customModule="Tamagotchi" customModuleProvider="target">
-                                <rect key="frame" x="186.5" y="457" width="41.5" height="20.5"/>
+                                <rect key="frame" x="186.5" y="498" width="41.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIZ-Ai-tWQ" customClass="CustomPaddingLabel" customModule="Tamagotchi" customModuleProvider="target">
-                                <rect key="frame" x="186.5" y="489.5" width="41.5" height="20.5"/>
+                                <rect key="frame" x="186.5" y="530.5" width="41.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="VKk-9z-vcm">
-                                <rect key="frame" x="50" y="530" width="314" height="100"/>
+                                <rect key="frame" x="50" y="571" width="314" height="76"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fda-ay-2VJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="32"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X0Y-FU-cyS">
-                                                <rect key="frame" x="0.0" y="0.0" width="234" height="44"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="밥주세요" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X0Y-FU-cyS">
+                                                <rect key="frame" x="0.0" y="0.0" width="234" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7LM-P1-XFi">
-                                                <rect key="frame" x="244" y="0.0" width="70" height="44"/>
+                                                <rect key="frame" x="244" y="0.0" width="70" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="zvz-NE-TUv"/>
                                                 </constraints>
@@ -64,19 +64,19 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="m95-cz-UUh"/>
+                                            <constraint firstAttribute="height" constant="32" id="m95-cz-UUh"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2gl-wU-IK2">
-                                        <rect key="frame" x="0.0" y="56" width="314" height="44"/>
+                                        <rect key="frame" x="0.0" y="44" width="314" height="32"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1BW-8Q-MaW">
-                                                <rect key="frame" x="0.0" y="0.0" width="234" height="44"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="물주세요" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1BW-8Q-MaW">
+                                                <rect key="frame" x="0.0" y="0.0" width="234" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mJ-bk-DY6">
-                                                <rect key="frame" x="244" y="0.0" width="70" height="44"/>
+                                                <rect key="frame" x="244" y="0.0" width="70" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="7Qx-wM-Twa"/>
                                                 </constraints>
@@ -89,7 +89,7 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="0FZ-eN-MAp"/>
+                                            <constraint firstAttribute="height" constant="32" id="0FZ-eN-MAp"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -105,7 +105,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="OIZ-Ai-tWQ" firstAttribute="centerX" secondItem="gUR-Bx-213" secondAttribute="centerX" id="0cd-wr-Tel"/>
-                            <constraint firstItem="PF5-Xk-9yI" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.4" id="4Ko-Cz-yPS"/>
+                            <constraint firstItem="PF5-Xk-9yI" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.5" id="4Ko-Cz-yPS"/>
                             <constraint firstItem="rnU-Qu-Xrl" firstAttribute="bottom" secondItem="DLL-dl-uUz" secondAttribute="bottom" constant="50" id="Aqg-pc-z3h"/>
                             <constraint firstItem="PF5-Xk-9yI" firstAttribute="centerX" secondItem="rnU-Qu-Xrl" secondAttribute="centerX" id="Epk-wv-Zbj"/>
                             <constraint firstItem="gUR-Bx-213" firstAttribute="top" secondItem="PF5-Xk-9yI" secondAttribute="bottom" constant="12" id="GqI-j2-YBt"/>
@@ -123,6 +123,16 @@
                             <constraint firstItem="DLL-dl-uUz" firstAttribute="leading" secondItem="rnU-Qu-Xrl" secondAttribute="leading" constant="20" id="yaI-wG-0ad"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="DLL-dl-uUz" id="bTg-nI-iag"/>
+                        <outlet property="nameLabel" destination="gUR-Bx-213" id="iph-4a-ICL"/>
+                        <outlet property="profileImageView" destination="PF5-Xk-9yI" id="TxF-l8-PhJ"/>
+                        <outlet property="riceButton" destination="7LM-P1-XFi" id="1IE-fy-t7R"/>
+                        <outlet property="riceTextField" destination="X0Y-FU-cyS" id="LVk-Kw-MGM"/>
+                        <outlet property="statusLabel" destination="OIZ-Ai-tWQ" id="jK9-hv-zdh"/>
+                        <outlet property="waterDropButton" destination="2mJ-bk-DY6" id="4Rp-Jq-24G"/>
+                        <outlet property="waterDropTextField" destination="1BW-8Q-MaW" id="vu8-ds-MUC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
