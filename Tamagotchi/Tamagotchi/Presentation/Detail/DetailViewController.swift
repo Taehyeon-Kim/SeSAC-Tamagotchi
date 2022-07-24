@@ -29,6 +29,7 @@ final class DetailViewController: UIViewController {
     }
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
+        self.saveData()
         let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
         let sceneDelegate = windowScene?.delegate as? SceneDelegate
        
@@ -75,5 +76,9 @@ extension DetailViewController {
         self.cancelButton.layer.borderWidth = 0.5
         self.startButton.layer.borderColor = Color.pointColor.cgColor
         self.startButton.layer.borderWidth = 0.5
+    }
+    
+    private func saveData() {
+        UserDefaults.standard.set(tamagotchi, forKey: "tamagotchiData")
     }
 }
