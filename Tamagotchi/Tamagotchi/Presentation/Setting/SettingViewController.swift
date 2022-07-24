@@ -74,7 +74,6 @@ extension SettingViewController {
             guard let selectViewController = UIStoryboard(name: "SelectViewController", bundle: nil).instantiateViewController(withIdentifier: "SelectViewController") as? SelectViewController else { return }
             self.navigationController?.pushViewController(selectViewController, animated: true)
         case .data:
-            return
             self.makeAlert(title: "데이터 초기화", message: "정말 다시 처음부터 시작하실 건가요?", cancelTitle: "아니", confirmTitle: "응", cancelHandler: nil) {
                 let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
                 let sceneDelegate = windowScene?.delegate as? SceneDelegate
