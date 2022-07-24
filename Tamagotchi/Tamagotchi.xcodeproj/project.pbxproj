@@ -31,6 +31,7 @@
 		BDFFE3C0288D77BE002F75D9 /* CustomPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3BF288D77BE002F75D9 /* CustomPaddingLabel.swift */; };
 		BDFFE3C3288D7A1B002F75D9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3C2288D7A1B002F75D9 /* Color.swift */; };
 		BDFFE3C6288D947C002F75D9 /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3C5288D947C002F75D9 /* OptionTableViewCell.swift */; };
+		BDFFE3CA288D9C4A002F75D9 /* TextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3C9288D9C4A002F75D9 /* TextField+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		BDFFE3BF288D77BE002F75D9 /* CustomPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPaddingLabel.swift; sourceTree = "<group>"; };
 		BDFFE3C2288D7A1B002F75D9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		BDFFE3C5288D947C002F75D9 /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
+		BDFFE3C9288D9C4A002F75D9 /* TextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				BDFFE3BB288D4DC5002F75D9 /* TamagotchiType.swift */,
+				BDFFE3C9288D9C4A002F75D9 /* TextField+Extension.swift */,
 				BDFFE3BF288D77BE002F75D9 /* CustomPaddingLabel.swift */,
 			);
 			path = Common;
@@ -327,6 +330,7 @@
 				BDFFE3C0288D77BE002F75D9 /* CustomPaddingLabel.swift in Sources */,
 				BD7E0AFE288BA1BD000C31DF /* Tamagotchi.swift in Sources */,
 				BD7E0AE6288B9834000C31DF /* NameViewController.swift in Sources */,
+				BDFFE3CA288D9C4A002F75D9 /* TextField+Extension.swift in Sources */,
 				BD7E0AFA288B98F3000C31DF /* SettingViewController.swift in Sources */,
 				BD7E0AEE288B988D000C31DF /* MainViewController.swift in Sources */,
 			);
