@@ -13,6 +13,7 @@ final class SelectViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureNavigationBar()
         self.configureCollectionView()
     }
     
@@ -37,5 +38,11 @@ final class SelectViewController: UICollectionViewController {
             return UICollectionViewCell()
         }
         return cell
+    }
+}
+
+extension SelectViewController {
+    private func configureNavigationBar() {
+        self.title = "다마고치 선택하기"
     }
 }
