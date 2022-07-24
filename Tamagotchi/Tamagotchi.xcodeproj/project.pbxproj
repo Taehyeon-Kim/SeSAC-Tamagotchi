@@ -28,6 +28,7 @@
 		BD8333C9288A92DF00683E3E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BD8333C8288A92DF00683E3E /* Lottie */; };
 		BDFFE3BA288D46D0002F75D9 /* TamagotchiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3B9288D46D0002F75D9 /* TamagotchiCollectionViewCell.swift */; };
 		BDFFE3BC288D4DC5002F75D9 /* TamagotchiType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3BB288D4DC5002F75D9 /* TamagotchiType.swift */; };
+		BDFFE3C0288D77BE002F75D9 /* CustomPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3BF288D77BE002F75D9 /* CustomPaddingLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		BD8333BB288A916D00683E3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDFFE3B9288D46D0002F75D9 /* TamagotchiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagotchiCollectionViewCell.swift; sourceTree = "<group>"; };
 		BDFFE3BB288D4DC5002F75D9 /* TamagotchiType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagotchiType.swift; sourceTree = "<group>"; };
+		BDFFE3BF288D77BE002F75D9 /* CustomPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPaddingLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				BDFFE3BB288D4DC5002F75D9 /* TamagotchiType.swift */,
+				BDFFE3BF288D77BE002F75D9 /* CustomPaddingLabel.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				BD8333B0288A916900683E3E /* SceneDelegate.swift in Sources */,
 				BD7E0AF8288B98CE000C31DF /* SelectViewController.swift in Sources */,
 				BD7E0AF0288B98A3000C31DF /* DetailViewController.swift in Sources */,
+				BDFFE3C0288D77BE002F75D9 /* CustomPaddingLabel.swift in Sources */,
 				BD7E0AFE288BA1BD000C31DF /* Tamagotchi.swift in Sources */,
 				BD7E0AE6288B9834000C31DF /* NameViewController.swift in Sources */,
 				BD7E0AFA288B98F3000C31DF /* SettingViewController.swift in Sources */,
