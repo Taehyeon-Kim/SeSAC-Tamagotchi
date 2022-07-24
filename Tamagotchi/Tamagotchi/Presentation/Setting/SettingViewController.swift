@@ -8,6 +8,41 @@
 import UIKit
 
 final class SettingViewController: UITableViewController {
+    
+    private enum SettingOption: CaseIterable {
+        case name, tamagotchi, data
+        
+        var image: UIImage? {
+            switch self {
+            case .name:
+                return UIImage(systemName: "pencil")
+            case .tamagotchi:
+                return UIImage(systemName: "moon.fill")
+            case .data:
+                return UIImage(systemName: "arrow.clockwise")
+            }
+        }
+        
+        var title: String {
+            switch self {
+            case .name:
+                return "내 이름 설정하기"
+            case .tamagotchi:
+                return "다마고치 변경하기"
+            case .data:
+                return "데이터 초기화"
+            }
+        }
+        
+        var detail: String? {
+            switch self {
+            case .name:
+                return "고래밥"
+            case .tamagotchi, .data:
+                return nil
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,14 +52,16 @@ final class SettingViewController: UITableViewController {
 
 extension SettingViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return SettingOption.allCases.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "OptionTableViewCell") as? OptionTableViewCell else {
             return UITableViewCell()
         }
-        
+        cell.imageView?.image = SettingOption.allCases[indexPath.row].image
+        cell.textLabel?.text = SettingOption.allCases[indexPath.row].title
+        cell.detailTextLabel?.text = SettingOption.allCases[indexPath.row].detail
         return cell
     }
 }

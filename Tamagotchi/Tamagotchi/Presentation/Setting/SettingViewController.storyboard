@@ -15,6 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="OptionTableViewCell" textLabel="XF4-2G-3b6" detailTextLabel="lfv-T7-mgN" imageView="anH-wg-sjR" rowHeight="86" style="IBUITableViewCellStyleValue1" id="ca5-WD-hrC" customClass="OptionTableViewCell" customModule="Tamagotchi" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="86"/>
@@ -24,7 +25,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XF4-2G-3b6">
-                                            <rect key="frame" x="55.5" y="36" width="25" height="14.5"/>
+                                            <rect key="frame" x="55" y="36" width="25" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
