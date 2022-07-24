@@ -14,6 +14,7 @@ final class SelectViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureUI()
         self.configureNavigationBar()
         self.configureCollectionView()
     }
@@ -44,6 +45,11 @@ final class SelectViewController: UICollectionViewController {
 }
 
 extension SelectViewController {
+    private func configureUI() {
+        self.collectionView.backgroundColor = .clear
+        self.view.backgroundColor = Color.backgroundColor
+    }
+    
     private func configureNavigationBar() {
         self.title = "다마고치 선택하기"
     }
