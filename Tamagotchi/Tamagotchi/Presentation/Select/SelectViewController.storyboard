@@ -36,37 +36,24 @@
                                                 <constraint firstAttribute="width" secondItem="dGF-Zd-OeP" secondAttribute="height" id="de3-bQ-NWa"/>
                                             </constraints>
                                         </imageView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIZ-MO-1zO">
-                                            <rect key="frame" x="0.0" y="192" width="192" height="51"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NameNameNameName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FF1-se-uCq">
-                                                    <rect key="frame" x="20" y="15" width="152" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            <constraints>
-                                                <constraint firstItem="FF1-se-uCq" firstAttribute="leading" secondItem="mIZ-MO-1zO" secondAttribute="leading" constant="20" id="19t-Ph-jQE"/>
-                                                <constraint firstItem="FF1-se-uCq" firstAttribute="centerY" secondItem="mIZ-MO-1zO" secondAttribute="centerY" id="3CR-bR-XTE"/>
-                                                <constraint firstAttribute="trailing" secondItem="FF1-se-uCq" secondAttribute="trailing" constant="20" id="lFI-JG-eHd"/>
-                                            </constraints>
-                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NameNameNameName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FF1-se-uCq" customClass="CustomPaddingLabel" customModule="Tamagotchi" customModuleProvider="target">
+                                            <rect key="frame" x="6.5" y="200" width="179.5" height="35"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="dGF-Zd-OeP" secondAttribute="trailing" id="0fu-C0-VbT"/>
                                         <constraint firstItem="dGF-Zd-OeP" firstAttribute="leading" secondItem="Auz-d9-IDU" secondAttribute="leading" id="8uj-1c-VNU"/>
-                                        <constraint firstAttribute="bottom" secondItem="mIZ-MO-1zO" secondAttribute="bottom" id="Adr-rs-Hmf"/>
                                         <constraint firstItem="dGF-Zd-OeP" firstAttribute="top" secondItem="Auz-d9-IDU" secondAttribute="top" id="GCW-nW-QNk"/>
-                                        <constraint firstAttribute="trailing" secondItem="mIZ-MO-1zO" secondAttribute="trailing" id="GSK-w6-EO8"/>
-                                        <constraint firstItem="mIZ-MO-1zO" firstAttribute="top" secondItem="dGF-Zd-OeP" secondAttribute="bottom" id="TvZ-m9-XVP"/>
-                                        <constraint firstItem="mIZ-MO-1zO" firstAttribute="leading" secondItem="Auz-d9-IDU" secondAttribute="leading" id="WYu-bw-V34"/>
+                                        <constraint firstAttribute="bottom" secondItem="FF1-se-uCq" secondAttribute="bottom" constant="8" id="QES-90-skA"/>
+                                        <constraint firstItem="FF1-se-uCq" firstAttribute="centerX" secondItem="Auz-d9-IDU" secondAttribute="centerX" id="fNv-m8-9yV"/>
+                                        <constraint firstItem="FF1-se-uCq" firstAttribute="top" secondItem="dGF-Zd-OeP" secondAttribute="bottom" constant="8" id="gnz-Hf-veC"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="192" height="243"/>
                                 <connections>
-                                    <outlet property="nameContainerView" destination="mIZ-MO-1zO" id="zjl-r1-WbP"/>
                                     <outlet property="nameLabel" destination="FF1-se-uCq" id="cyL-qW-L7E"/>
                                     <outlet property="profileImageView" destination="dGF-Zd-OeP" id="cDX-h5-Z2N"/>
                                 </connections>

@@ -22,7 +22,7 @@ final class SelectViewController: UICollectionViewController {
         let layout = UICollectionViewFlowLayout()
         let width = UIScreen.main.bounds.width - (spacing * 4)
         let cellWidth = width / 3
-        layout.itemSize = CGSize(width: cellWidth, height: cellWidth * 1.2)
+        layout.itemSize = CGSize(width: cellWidth, height: cellWidth * 1.4)
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = spacing
         layout.minimumInteritemSpacing = spacing

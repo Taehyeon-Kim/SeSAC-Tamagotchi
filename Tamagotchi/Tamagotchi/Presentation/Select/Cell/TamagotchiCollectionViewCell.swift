@@ -11,8 +11,7 @@ final class TamagotchiCollectionViewCell: UICollectionViewCell {
     static let cellID: String = "TamagotchiCollectionViewCell"
     
     @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var nameContainerView: UIView!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var nameLabel: CustomPaddingLabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,8 +19,11 @@ final class TamagotchiCollectionViewCell: UICollectionViewCell {
     }
     
     private func configureUI() {
-        self.nameContainerView.layer.cornerRadius = 8
-        self.nameLabel.font = .boldSystemFont(ofSize: 13)
+        self.nameLabel.font = .systemFont(ofSize: 12)
+        self.nameLabel.layer.borderColor = UIColor.gray.cgColor
+        self.nameLabel.layer.borderWidth = 1
+        self.nameLabel.layer.cornerRadius = 4
+        self.nameLabel.padding(top: 8, bottom: 8, left: 4, right: 4)
     }
     
     func configureData(_ data: Tamagotchi) {
