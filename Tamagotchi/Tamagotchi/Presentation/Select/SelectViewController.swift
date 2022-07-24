@@ -45,8 +45,7 @@ final class SelectViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if tamagotchiList[indexPath.row].type == .preparing {
-            let confirmAction = UIAlertAction(title: "확인", style: .default)
-            self.makeAlert(title: "캐릭터가 준비중이에요!", message: nil, confirmAction: confirmAction)
+            self.makeAlert(title: "캐릭터가 준비중이에요!", message: nil, confirmTitle: "확인")
         } else {
             guard let detailViewController = UIStoryboard(name: "DetailViewController", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
             detailViewController.modalPresentationStyle = .overFullScreen

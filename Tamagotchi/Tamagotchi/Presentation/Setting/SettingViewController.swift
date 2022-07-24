@@ -74,9 +74,16 @@ extension SettingViewController {
             guard let selectViewController = UIStoryboard(name: "SelectViewController", bundle: nil).instantiateViewController(withIdentifier: "SelectViewController") as? SelectViewController else { return }
             self.navigationController?.pushViewController(selectViewController, animated: true)
         case .data:
-            let cancelAction = UIAlertAction(title: "아니", style: .cancel, handler: nil)
-            let confirmAction = UIAlertAction(title: "응", style: .default, handler: nil)
-            self.makeAlert(title: "데이터 초기화", message: "정말 다시 처음부터 시작하실 건가요?", cancelAction: cancelAction, confirmAction: confirmAction)
+            return
+            self.makeAlert(title: "데이터 초기화", message: "정말 다시 처음부터 시작하실 건가요?", cancelTitle: "아니", confirmTitle: "응", cancelHandler: nil) {
+                let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+                let sceneDelegate = windowScene?.delegate as? SceneDelegate
+
+                guard let rootViewController = UIStoryboard(name: "SelectViewController", bundle: nil).instantiateViewController(withIdentifier: "SelectViewController") as? SelectViewController else { return }
+
+                sceneDelegate?.window?.rootViewController = UINavigationController(rootViewController: rootViewController)
+                sceneDelegate?.window?.makeKeyAndVisible()
+            }
         }
     }
 }
