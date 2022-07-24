@@ -15,16 +15,125 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bubble" translatesAutoresizingMaskIntoConstraints="NO" id="rnU-Qu-Xrl">
+                                <rect key="frame" x="62" y="74" width="290" height="193"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rnU-Qu-Xrl" secondAttribute="height" multiplier="3:2" id="jIW-C4-206"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3-8" translatesAutoresizingMaskIntoConstraints="NO" id="PF5-Xk-9yI">
+                                <rect key="frame" x="124" y="279" width="166" height="166"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PF5-Xk-9yI" secondAttribute="height" multiplier="1:1" id="eOZ-if-BUJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUR-Bx-213" customClass="CustomPaddingLabel" customModule="Tamagotchi" customModuleProvider="target">
+                                <rect key="frame" x="186.5" y="457" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIZ-Ai-tWQ" customClass="CustomPaddingLabel" customModule="Tamagotchi" customModuleProvider="target">
+                                <rect key="frame" x="186.5" y="489.5" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="VKk-9z-vcm">
+                                <rect key="frame" x="50" y="530" width="314" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fda-ay-2VJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="44"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X0Y-FU-cyS">
+                                                <rect key="frame" x="0.0" y="0.0" width="234" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7LM-P1-XFi">
+                                                <rect key="frame" x="244" y="0.0" width="70" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="zvz-NE-TUv"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="tintColor" red="0.30196078430000001" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="밥먹기" image="leaf.circle" catalog="system">
+                                                    <color key="titleColor" red="0.30196078430000001" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="m95-cz-UUh"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2gl-wU-IK2">
+                                        <rect key="frame" x="0.0" y="56" width="314" height="44"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1BW-8Q-MaW">
+                                                <rect key="frame" x="0.0" y="0.0" width="234" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mJ-bk-DY6">
+                                                <rect key="frame" x="244" y="0.0" width="70" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="7Qx-wM-Twa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="tintColor" red="0.30196078430000001" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="물먹기" image="drop.circle" catalog="system">
+                                                    <color key="titleColor" red="0.30196078430000001" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="0FZ-eN-MAp"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelvLabelLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLL-dl-uUz">
+                                <rect key="frame" x="82" y="94" width="250" height="123"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OIZ-Ai-tWQ" firstAttribute="centerX" secondItem="gUR-Bx-213" secondAttribute="centerX" id="0cd-wr-Tel"/>
+                            <constraint firstItem="PF5-Xk-9yI" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.4" id="4Ko-Cz-yPS"/>
+                            <constraint firstItem="rnU-Qu-Xrl" firstAttribute="bottom" secondItem="DLL-dl-uUz" secondAttribute="bottom" constant="50" id="Aqg-pc-z3h"/>
+                            <constraint firstItem="PF5-Xk-9yI" firstAttribute="centerX" secondItem="rnU-Qu-Xrl" secondAttribute="centerX" id="Epk-wv-Zbj"/>
+                            <constraint firstItem="gUR-Bx-213" firstAttribute="top" secondItem="PF5-Xk-9yI" secondAttribute="bottom" constant="12" id="GqI-j2-YBt"/>
+                            <constraint firstItem="DLL-dl-uUz" firstAttribute="top" secondItem="rnU-Qu-Xrl" secondAttribute="top" constant="20" id="I7O-cA-7ZS"/>
+                            <constraint firstItem="VKk-9z-vcm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="IKC-LS-RsD"/>
+                            <constraint firstItem="PF5-Xk-9yI" firstAttribute="top" secondItem="rnU-Qu-Xrl" secondAttribute="bottom" constant="12" id="Kz1-cb-O9v"/>
+                            <constraint firstItem="rnU-Qu-Xrl" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.7" id="WC8-P2-sAr"/>
+                            <constraint firstItem="rnU-Qu-Xrl" firstAttribute="trailing" secondItem="DLL-dl-uUz" secondAttribute="trailing" constant="20" id="aNs-Yq-ILd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="VKk-9z-vcm" secondAttribute="trailing" constant="50" id="d0w-ox-Bbh"/>
+                            <constraint firstItem="rnU-Qu-Xrl" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="eLM-Ew-SgS"/>
+                            <constraint firstItem="gUR-Bx-213" firstAttribute="centerX" secondItem="PF5-Xk-9yI" secondAttribute="centerX" id="eeW-Ps-GnR"/>
+                            <constraint firstItem="rnU-Qu-Xrl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="j6A-Ae-lkk"/>
+                            <constraint firstItem="VKk-9z-vcm" firstAttribute="top" secondItem="OIZ-Ai-tWQ" secondAttribute="bottom" constant="20" id="s33-Ty-JFv"/>
+                            <constraint firstItem="OIZ-Ai-tWQ" firstAttribute="top" secondItem="gUR-Bx-213" secondAttribute="bottom" constant="12" id="yFd-3X-wXJ"/>
+                            <constraint firstItem="DLL-dl-uUz" firstAttribute="leading" secondItem="rnU-Qu-Xrl" secondAttribute="leading" constant="20" id="yaI-wG-0ad"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="116"/>
+            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
         </scene>
     </scenes>
     <resources>
+        <image name="3-8" width="152" height="151"/>
+        <image name="bubble" width="222" height="142"/>
+        <image name="drop.circle" catalog="system" width="128" height="121"/>
+        <image name="leaf.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
