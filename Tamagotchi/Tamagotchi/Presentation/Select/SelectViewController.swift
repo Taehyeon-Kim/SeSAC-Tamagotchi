@@ -67,6 +67,7 @@ extension SelectViewController {
             guard let detailViewController = UIStoryboard(name: "DetailViewController", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
             detailViewController.modalPresentationStyle = .overFullScreen
             detailViewController.modalTransitionStyle = .crossDissolve
+            detailViewController.tamagotchi = tamagotchiList[indexPath.row]
             self.present(detailViewController, animated: true)
         }
     }

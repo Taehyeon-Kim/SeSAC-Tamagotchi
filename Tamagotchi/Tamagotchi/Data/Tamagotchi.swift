@@ -21,6 +21,9 @@ struct Tamagotchi {
     var rice: Double = 0
     var waterDrop: Double = 0
     var message: String?
+    var description: String? {
+        return type.description
+    }
 }
 
 extension Tamagotchi {

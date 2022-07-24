@@ -8,6 +8,8 @@
 import UIKit
 
 final class DetailViewController: UIViewController {
+    
+    var tamagotchi: Tamagotchi?
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var profileImageView: UIImageView!
@@ -19,25 +21,7 @@ final class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureUI()
-    }
-    
-    private func configureUI() {
-        self.containerView.backgroundColor = Color.backgroundColor
-        self.containerView.layer.cornerRadius = 8
-        self.nameLabel.padding(top: 4, bottom: 4, left: 6, right: 6)
-        self.nameLabel.font = .boldSystemFont(ofSize: 15)
-        self.nameLabel.textColor = Color.pointColor
-        self.nameLabel.layer.borderColor = Color.pointColor.cgColor
-        self.nameLabel.layer.borderWidth = 1
-        self.nameLabel.layer.cornerRadius = 4
-        self.descriptionLabel.textColor = Color.pointColor
-        self.descriptionLabel.font = .systemFont(ofSize: 13)
-        self.cancelButton.setTitleColor(Color.pointColor, for: .normal)
-        self.startButton.setTitleColor(Color.pointColor, for: .normal)
-        self.cancelButton.layer.borderColor = Color.pointColor.cgColor
-        self.cancelButton.layer.borderWidth = 0.5
-        self.startButton.layer.borderColor = Color.pointColor.cgColor
-        self.startButton.layer.borderWidth = 0.5
+        self.configureData()
     }
     
     @IBAction func cancelButtonTapped(_ sender: UIButton) {
@@ -52,5 +36,44 @@ final class DetailViewController: UIViewController {
 
         sceneDelegate?.window?.rootViewController = UINavigationController(rootViewController: rootViewController)
         sceneDelegate?.window?.makeKeyAndVisible()
+    }
+}
+
+extension DetailViewController {
+    private func configureUI() {
+        self.configureContainerView()
+        self.configureButtons()
+        self.configureLabels()
+    }
+    
+    private func configureData() {
+        self.profileImageView.image = tamagotchi?.profileImage
+        self.nameLabel.text = tamagotchi?.name
+        self.descriptionLabel.text = tamagotchi?.description
+    }
+    
+    private func configureContainerView() {
+        self.containerView.backgroundColor = Color.backgroundColor
+        self.containerView.layer.cornerRadius = 8
+    }
+    
+    private func configureLabels() {
+        self.nameLabel.padding(top: 4, bottom: 4, left: 6, right: 6)
+        self.nameLabel.font = .boldSystemFont(ofSize: 15)
+        self.nameLabel.textColor = Color.pointColor
+        self.nameLabel.layer.borderColor = Color.pointColor.cgColor
+        self.nameLabel.layer.borderWidth = 1
+        self.nameLabel.layer.cornerRadius = 4
+        self.descriptionLabel.textColor = Color.pointColor
+        self.descriptionLabel.font = .systemFont(ofSize: 13)
+    }
+
+    private func configureButtons() {
+        self.cancelButton.setTitleColor(Color.pointColor, for: .normal)
+        self.startButton.setTitleColor(Color.pointColor, for: .normal)
+        self.cancelButton.layer.borderColor = Color.pointColor.cgColor
+        self.cancelButton.layer.borderWidth = 0.5
+        self.startButton.layer.borderColor = Color.pointColor.cgColor
+        self.startButton.layer.borderWidth = 0.5
     }
 }

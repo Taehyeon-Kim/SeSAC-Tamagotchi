@@ -38,4 +38,17 @@ enum TamagotchiType: CaseIterable {
             return "준비중이에요"
         }
     }
+    
+    var description: String? {
+        switch self {
+        case .ddaggeum:
+            return "저는 따끔따끔 다마고치입니다"
+        case .bangsil:
+            return "저는 방실방실 다마고치입니다"
+        case .banzzak:
+            return "저는 반짝반짝 다마고치입니다"
+        case .preparing:
+            return nil
+        }
+    }
 }
