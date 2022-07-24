@@ -23,4 +23,11 @@ final class TamagotchiCollectionViewCell: UICollectionViewCell {
         self.nameContainerView.layer.cornerRadius = 8
         self.nameLabel.font = .boldSystemFont(ofSize: 13)
     }
+    
+    func configureData(_ data: Tamagotchi) {
+        if let profileImage = data.profileImage {
+            self.profileImageView.image = profileImage
+        }
+        self.nameLabel.text = data.name
+    }
 }

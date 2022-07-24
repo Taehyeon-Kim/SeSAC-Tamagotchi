@@ -10,6 +10,7 @@ import UIKit
 final class SelectViewController: UICollectionViewController {
     
     private let spacing: CGFloat = 20
+    private let tamagotchiList: [Tamagotchi] = Tamagotchi.list
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,13 +31,14 @@ final class SelectViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return self.tamagotchiList.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: TamagotchiCollectionViewCell.cellID, for: indexPath) as? TamagotchiCollectionViewCell else {
             return UICollectionViewCell()
         }
+        cell.configureData(self.tamagotchiList[indexPath.row])
         return cell
     }
 }
