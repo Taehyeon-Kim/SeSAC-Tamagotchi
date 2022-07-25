@@ -24,10 +24,21 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         self.configureUI()
         self.configureNavigationBar()
+        self.loadData()
     }
 }
 
 extension MainViewController {
+    private func loadData() {
+        let name = UserDefaults.standard.string(forKey: "name")
+        let level = UserDefaults.standard.double(forKey: "level")
+        let rice = UserDefaults.standard.double(forKey: "rice")
+        let waterDrop = UserDefaults.standard.double(forKey: "waterDrop")
+        
+        self.nameLabel.text = name
+        self.statusLabel.text = "LV\(level) · 밥알 \(rice)개 · 물방울 \(waterDrop)개"
+    }
+    
     private func configureUI() {
         self.view.backgroundColor = Color.backgroundColor
         self.messageLabel.textColor = Color.pointColor
