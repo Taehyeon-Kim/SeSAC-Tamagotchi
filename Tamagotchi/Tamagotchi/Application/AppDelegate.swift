@@ -34,7 +34,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func configureNavigationBar() {
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: Color.pointColor]
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = Color.backgroundColor
+        appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: Color.pointColor]
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
         UINavigationBar.appearance().tintColor = Color.pointColor
     }
     
