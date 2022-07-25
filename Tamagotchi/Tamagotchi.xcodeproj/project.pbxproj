@@ -33,6 +33,7 @@
 		BDFFE3C6288D947C002F75D9 /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3C5288D947C002F75D9 /* OptionTableViewCell.swift */; };
 		BDFFE3CA288D9C4A002F75D9 /* TextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3C9288D9C4A002F75D9 /* TextField+Extension.swift */; };
 		BDFFE3CE288DA9C6002F75D9 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3CD288DA9C6002F75D9 /* UIViewController+Extension.swift */; };
+		BDFFE3D0288E68BE002F75D9 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3CF288E68BE002F75D9 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		BDFFE3C5288D947C002F75D9 /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
 		BDFFE3C9288D9C4A002F75D9 /* TextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extension.swift"; sourceTree = "<group>"; };
 		BDFFE3CD288DA9C6002F75D9 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		BDFFE3CF288E68BE002F75D9 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				BDFFE3C9288D9C4A002F75D9 /* TextField+Extension.swift */,
 				BDFFE3BF288D77BE002F75D9 /* CustomPaddingLabel.swift */,
 				BDFFE3CD288DA9C6002F75D9 /* UIViewController+Extension.swift */,
+				BDFFE3CF288E68BE002F75D9 /* UIView+Extension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 			files = (
 				BDFFE3BC288D4DC5002F75D9 /* TamagotchiType.swift in Sources */,
 				BDFFE3BA288D46D0002F75D9 /* TamagotchiCollectionViewCell.swift in Sources */,
+				BDFFE3D0288E68BE002F75D9 /* UIView+Extension.swift in Sources */,
 				BD8333AE288A916900683E3E /* AppDelegate.swift in Sources */,
 				BDFFE3CE288DA9C6002F75D9 /* UIViewController+Extension.swift in Sources */,
 				BD8333B0288A916900683E3E /* SceneDelegate.swift in Sources */,
