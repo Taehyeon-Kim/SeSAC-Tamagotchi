@@ -34,6 +34,7 @@
 		BDFFE3CA288D9C4A002F75D9 /* TextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3C9288D9C4A002F75D9 /* TextField+Extension.swift */; };
 		BDFFE3CE288DA9C6002F75D9 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3CD288DA9C6002F75D9 /* UIViewController+Extension.swift */; };
 		BDFFE3D0288E68BE002F75D9 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3CF288E68BE002F75D9 /* UIView+Extension.swift */; };
+		BDFFE3D4288E77B3002F75D9 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3D3288E77B3002F75D9 /* UserDefaultManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		BDFFE3C9288D9C4A002F75D9 /* TextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extension.swift"; sourceTree = "<group>"; };
 		BDFFE3CD288DA9C6002F75D9 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		BDFFE3CF288E68BE002F75D9 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		BDFFE3D3288E77B3002F75D9 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				BDFFE3BF288D77BE002F75D9 /* CustomPaddingLabel.swift */,
 				BDFFE3CD288DA9C6002F75D9 /* UIViewController+Extension.swift */,
 				BDFFE3CF288E68BE002F75D9 /* UIView+Extension.swift */,
+				BDFFE3D3288E77B3002F75D9 /* UserDefaultManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				BD7E0AE6288B9834000C31DF /* NameViewController.swift in Sources */,
 				BDFFE3CA288D9C4A002F75D9 /* TextField+Extension.swift in Sources */,
 				BD7E0AFA288B98F3000C31DF /* SettingViewController.swift in Sources */,
+				BDFFE3D4288E77B3002F75D9 /* UserDefaultManager.swift in Sources */,
 				BD7E0AEE288B988D000C31DF /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
