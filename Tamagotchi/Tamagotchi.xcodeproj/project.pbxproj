@@ -132,12 +132,10 @@
 		BD7E0ADD288B9661000C31DF /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				BDFFE3BB288D4DC5002F75D9 /* TamagotchiType.swift */,
-				BDFFE3C9288D9C4A002F75D9 /* TextField+Extension.swift */,
-				BDFFE3BF288D77BE002F75D9 /* CustomPaddingLabel.swift */,
-				BDFFE3CD288DA9C6002F75D9 /* UIViewController+Extension.swift */,
-				BDFFE3CF288E68BE002F75D9 /* UIView+Extension.swift */,
-				BDFFE3D3288E77B3002F75D9 /* UserDefaultManager.swift */,
+				BDFFE3D8288E7BEC002F75D9 /* Enum */,
+				BDFFE3D5288E7BAB002F75D9 /* Extension */,
+				BDFFE3D7288E7BE6002F75D9 /* Manager */,
+				BDFFE3D6288E7BD3002F75D9 /* UIComponent */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -240,6 +238,40 @@
 				BDFFE3C5288D947C002F75D9 /* OptionTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		BDFFE3D5288E7BAB002F75D9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BDFFE3C9288D9C4A002F75D9 /* TextField+Extension.swift */,
+				BDFFE3CF288E68BE002F75D9 /* UIView+Extension.swift */,
+				BDFFE3CD288DA9C6002F75D9 /* UIViewController+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		BDFFE3D6288E7BD3002F75D9 /* UIComponent */ = {
+			isa = PBXGroup;
+			children = (
+				BDFFE3BF288D77BE002F75D9 /* CustomPaddingLabel.swift */,
+			);
+			path = UIComponent;
+			sourceTree = "<group>";
+		};
+		BDFFE3D7288E7BE6002F75D9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				BDFFE3D3288E77B3002F75D9 /* UserDefaultManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		BDFFE3D8288E7BEC002F75D9 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				BDFFE3BB288D4DC5002F75D9 /* TamagotchiType.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
