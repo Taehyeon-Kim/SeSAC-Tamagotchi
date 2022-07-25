@@ -146,8 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				BDFFE3B7288D4693002F75D9 /* Cell */,
-				BD7E0AF5288B98C7000C31DF /* SelectViewController.storyboard */,
-				BD7E0AF7288B98CE000C31DF /* SelectViewController.swift */,
+				BDFFE3E4288E8297002F75D9 /* Controller */,
 			);
 			path = Select;
 			sourceTree = "<group>";
@@ -155,8 +154,7 @@
 		BD7E0ADF288B9774000C31DF /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				BD7E0AF3288B98BE000C31DF /* DetailViewController.storyboard */,
-				BD7E0AEF288B98A3000C31DF /* DetailViewController.swift */,
+				BDFFE3E3288E828F002F75D9 /* Controller */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -164,8 +162,7 @@
 		BD7E0AE0288B977B000C31DF /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				BD7E0AEB288B986E000C31DF /* MainViewController.storyboard */,
-				BD7E0AED288B988D000C31DF /* MainViewController.swift */,
+				BDFFE3E2288E8288002F75D9 /* Controller */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -174,8 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				BDFFE3C4288D946A002F75D9 /* Cell */,
-				BD7E0AFB288B9905000C31DF /* SettingViewController.storyboard */,
-				BD7E0AF9288B98F3000C31DF /* SettingViewController.swift */,
+				BDFFE3E1288E8281002F75D9 /* Controller */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -183,8 +179,7 @@
 		BD7E0AE2288B9794000C31DF /* Name */ = {
 			isa = PBXGroup;
 			children = (
-				BD7E0AE3288B9828000C31DF /* NameViewController.storyboard */,
-				BD7E0AE5288B9834000C31DF /* NameViewController.swift */,
+				BDFFE3E0288E8277002F75D9 /* Controller */,
 			);
 			path = Name;
 			sourceTree = "<group>";
@@ -255,8 +250,8 @@
 		BDFFE3D7288E7BE6002F75D9 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				BDFFE3D3288E77B3002F75D9 /* UserDefaultManager.swift */,
 				BDFFE3DE288E7D6C002F75D9 /* StoryboardManager.swift */,
+				BDFFE3D3288E77B3002F75D9 /* UserDefaultManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -275,6 +270,51 @@
 				BDFFE3C2288D7A1B002F75D9 /* Color.swift */,
 			);
 			path = NameSpace;
+			sourceTree = "<group>";
+		};
+		BDFFE3E0288E8277002F75D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD7E0AE3288B9828000C31DF /* NameViewController.storyboard */,
+				BD7E0AE5288B9834000C31DF /* NameViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BDFFE3E1288E8281002F75D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD7E0AFB288B9905000C31DF /* SettingViewController.storyboard */,
+				BD7E0AF9288B98F3000C31DF /* SettingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BDFFE3E2288E8288002F75D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD7E0AEB288B986E000C31DF /* MainViewController.storyboard */,
+				BD7E0AED288B988D000C31DF /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BDFFE3E3288E828F002F75D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD7E0AF3288B98BE000C31DF /* DetailViewController.storyboard */,
+				BD7E0AEF288B98A3000C31DF /* DetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BDFFE3E4288E8297002F75D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD7E0AF5288B98C7000C31DF /* SelectViewController.storyboard */,
+				BD7E0AF7288B98CE000C31DF /* SelectViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
