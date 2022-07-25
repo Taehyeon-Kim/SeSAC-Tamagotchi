@@ -8,8 +8,7 @@
 import UIKit
 
 final class MainViewController: UIViewController {
-    
-    var nickname: String?
+
     private var type: Int = UserDefaultManager.characterType
     private var name: String = UserDefaultManager.characterName
     private var level: Int = UserDefaultManager.level
@@ -30,6 +29,11 @@ final class MainViewController: UIViewController {
         self.configureUI()
         self.configureNavigationBar()
         self.updateUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.configureNavigationBar()
     }
     
     @IBAction func riceButtonTapped(_ sender: UIButton) {
@@ -99,7 +103,7 @@ extension MainViewController {
     }
     
     private func configureNavigationBar() {
-        self.title = "\(nickname ?? "대장")님의 다마고치"
+        self.title = "\(UserDefaultManager.nickname)님의 다마고치"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.circle"), style: .plain, target: self, action: #selector(transitionToSettingViewController))
     }
     

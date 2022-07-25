@@ -37,7 +37,7 @@ final class SettingViewController: UITableViewController {
         var detail: String? {
             switch self {
             case .name:
-                return "고래밥"
+                return UserDefaultManager.nickname
             case .tamagotchi, .data:
                 return nil
             }
@@ -48,6 +48,11 @@ final class SettingViewController: UITableViewController {
         super.viewDidLoad()
         self.configureUI()
         self.configureNavigationBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
     }
 }
 

@@ -22,7 +22,8 @@ final class NameViewController: UIViewController {
 
 extension NameViewController {
     private func configureTextField() {
-        self.name = "고래밥"
+        self.name = UserDefaultManager.nickname
+        self.nameTextField.placeholder = "\(name!)님 이름을 입력해주세요!"
         self.nameTextField.text = name
         self.nameTextField.textColor = Color.pointColor
         self.nameTextField.drawUnderLine()
@@ -34,6 +35,9 @@ extension NameViewController {
     }
     
     @objc func saveButtonTapped() {
-        
+        if let nickname = nameTextField.text {
+            UserDefaultManager.nickname = nickname
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 }
