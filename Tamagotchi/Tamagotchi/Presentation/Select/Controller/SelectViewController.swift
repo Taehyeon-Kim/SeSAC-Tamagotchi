@@ -9,14 +9,18 @@ import UIKit
 
 final class SelectViewController: UICollectionViewController {
     
+    // MARK: - Properties
+    
     var type: SelectSceneState = .select
     private let spacing: CGFloat = 20
     private let tamagotchiList: [Tamagotchi] = Tamagotchi.list
     
+    // MARK: - Life Cycle Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.configureUI()
-        self.configureNavigationBar()
         self.configureCollectionView()
     }
 }
@@ -24,19 +28,30 @@ final class SelectViewController: UICollectionViewController {
 // MARK: - Methods
 
 extension SelectViewController {
+    
     private func configureUI() {
-        self.collectionView.backgroundColor = .clear
         self.view.backgroundColor = Color.backgroundColor
+        self.configureNavigationBar()
     }
     
     private func configureNavigationBar() {
         self.title = self.type.title
+    }
+    
+    private func transitionToDetailViewController(indexPath: IndexPath) {
+        guard let detailViewController = StoryboardManager.instantiateViewController(.detail, for: DetailViewController.self) else { return }
+        detailViewController.modalPresentationStyle = .overFullScreen
+        detailViewController.modalTransitionStyle = .crossDissolve
+        detailViewController.type = self.type
+        detailViewController.tamagotchi = tamagotchiList[indexPath.row]
+        self.present(detailViewController, animated: true)
     }
 }
 
 // MARK: - CollectionView Methods
 
 extension SelectViewController {
+    
     private func configureCollectionView() {
         let layout = UICollectionViewFlowLayout()
         let width = UIScreen.main.bounds.width - (spacing * 4)
@@ -47,6 +62,7 @@ extension SelectViewController {
         layout.minimumInteritemSpacing = spacing
         layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
         self.collectionView.collectionViewLayout = layout
+        self.collectionView.backgroundColor = .clear
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -63,14 +79,9 @@ extension SelectViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if tamagotchiList[indexPath.row].type == .preparing {
-            self.makeAlert(title: "캐릭터가 준비중이에요!", message: nil, confirmTitle: "확인")
+            self.makeAlert(title: "⏰ 캐릭터가 준비중이에요!", message: nil, confirmTitle: "확인")
         } else {
-            guard let detailViewController = StoryboardManager.instantiateViewController(.detail, for: DetailViewController.self) else { return }
-            detailViewController.modalPresentationStyle = .overFullScreen
-            detailViewController.modalTransitionStyle = .crossDissolve
-            detailViewController.tamagotchi = tamagotchiList[indexPath.row]
-            detailViewController.type = self.type
-            self.present(detailViewController, animated: true)
+            self.transitionToDetailViewController(indexPath: indexPath)
         }
     }
 }
