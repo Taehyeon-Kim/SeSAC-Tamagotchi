@@ -75,6 +75,8 @@ extension SettingViewController {
             self.navigationController?.pushViewController(selectViewController, animated: true)
         case .data:
             self.makeAlert(title: "데이터 초기화", message: "정말 다시 처음부터 시작하실 건가요?", cancelTitle: "아니", confirmTitle: "응", cancelHandler: nil) {
+                self.resetData()
+                
                 let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
                 let sceneDelegate = windowScene?.delegate as? SceneDelegate
 
@@ -84,6 +86,16 @@ extension SettingViewController {
                 sceneDelegate?.window?.makeKeyAndVisible()
             }
         }
+    }
+    
+    private func resetData() {
+        UserDefaultManager.isAppFirstLaunch = true
+        UserDefaultManager.characterType = 0
+        UserDefaultManager.nickname = "대장"
+        UserDefaultManager.characterName = ""
+        UserDefaultManager.level = 1
+        UserDefaultManager.rice = 0
+        UserDefaultManager.waterdrop = 0
     }
 }
 
