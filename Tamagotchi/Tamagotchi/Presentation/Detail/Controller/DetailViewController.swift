@@ -9,6 +9,7 @@ import UIKit
 
 final class DetailViewController: UIViewController {
     
+    var type: SelectType?
     var tamagotchi: Tamagotchi?
 
     @IBOutlet weak var containerView: UIView!
@@ -66,6 +67,7 @@ extension DetailViewController {
     }
 
     private func configureButtons() {
+        self.startButton.setTitle(type?.buttonTitle, for: .normal)
         self.cancelButton.setTitleColor(Color.pointColor, for: .normal)
         self.startButton.setTitleColor(Color.pointColor, for: .normal)
         self.cancelButton.makeBorder(color: Color.pointColor, borderWith: 0.5)

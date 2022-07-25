@@ -76,6 +76,7 @@ extension SettingViewController {
             self.navigationController?.pushViewController(nameViewController, animated: true)
         case .tamagotchi:
             guard let selectViewController = StoryboardManager.instantiateViewController(.select, for: SelectViewController.self) else { return }
+            selectViewController.type = .edit
             self.navigationController?.pushViewController(selectViewController, animated: true)
         case .data:
             self.makeAlert(title: "데이터 초기화", message: "정말 다시 처음부터 시작하실 건가요?", cancelTitle: "아니", confirmTitle: "응", cancelHandler: nil) {

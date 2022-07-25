@@ -7,8 +7,31 @@
 
 import UIKit
 
+enum SelectType {
+    case select, edit
+    
+    var title: String {
+        switch self {
+        case .select:
+            return "다마고치 선택하기"
+        case .edit:
+            return "다마고치 변경하기"
+        }
+    }
+    
+    var buttonTitle: String {
+        switch self {
+        case .select:
+            return "시작하기"
+        case .edit:
+            return "변경하기"
+        }
+    }
+}
+
 final class SelectViewController: UICollectionViewController {
     
+    var type: SelectType = .select
     private let spacing: CGFloat = 20
     private let tamagotchiList: [Tamagotchi] = Tamagotchi.list
     
@@ -29,7 +52,7 @@ extension SelectViewController {
     }
     
     private func configureNavigationBar() {
-        self.title = "다마고치 선택하기"
+        self.title = self.type.title
     }
 }
 
@@ -68,6 +91,7 @@ extension SelectViewController {
             detailViewController.modalPresentationStyle = .overFullScreen
             detailViewController.modalTransitionStyle = .crossDissolve
             detailViewController.tamagotchi = tamagotchiList[indexPath.row]
+            detailViewController.type = self.type
             self.present(detailViewController, animated: true)
         }
     }
