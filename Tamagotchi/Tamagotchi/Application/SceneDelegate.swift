@@ -17,11 +17,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
         
-        if UserDefaults.standard.bool(forKey: "hasTamagotchi") {
-            guard let rootViewController = UIStoryboard(name: "MainViewController", bundle: nil).instantiateViewController(withIdentifier: "MainViewController") as? MainViewController else { return }
+        if UserDefaultManager.isAppFirstLaunch {
+            guard let rootViewController = UIStoryboard(name: "SelectViewController", bundle: nil).instantiateViewController(withIdentifier: "SelectViewController") as? SelectViewController else { return }
             self.window?.rootViewController = UINavigationController(rootViewController: rootViewController)
         } else {
-            guard let rootViewController = UIStoryboard(name: "SelectViewController", bundle: nil).instantiateViewController(withIdentifier: "SelectViewController") as? SelectViewController else { return }
+            guard let rootViewController = UIStoryboard(name: "MainViewController", bundle: nil).instantiateViewController(withIdentifier: "MainViewController") as? MainViewController else { return }
             self.window?.rootViewController = UINavigationController(rootViewController: rootViewController)
         }
         

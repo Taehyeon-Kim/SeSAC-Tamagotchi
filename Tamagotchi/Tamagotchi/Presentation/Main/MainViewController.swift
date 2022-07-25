@@ -10,11 +10,11 @@ import UIKit
 final class MainViewController: UIViewController {
     
     var nickname: String?
-    private var type: Int?
-    private var name: String?
-    private var level: Int = 0
-    private var rice: Double = 0
-    private var waterdrop: Double = 0
+    private var type: Int = UserDefaultManager.characterType
+    private var name: String = UserDefaultManager.characterName
+    private var level: Int = UserDefaultManager.level
+    private var rice: Double = UserDefaultManager.rice
+    private var waterdrop: Double = UserDefaultManager.waterdrop
 
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
@@ -29,7 +29,6 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         self.configureUI()
         self.configureNavigationBar()
-        self.loadData()
         self.updateUI()
     }
     
@@ -39,6 +38,7 @@ final class MainViewController: UIViewController {
         }
         self.riceTextField.text = ""
         self.updateUI()
+        self.saveData()
     }
     
     @IBAction func waterdropButtonTapped(_ sender: UIButton) {
@@ -47,23 +47,23 @@ final class MainViewController: UIViewController {
         }
         self.waterDropTextField.text = ""
         self.updateUI()
+        self.saveData()
     }
 }
 
 extension MainViewController {
-    private func loadData() {
-        self.type = UserDefaults.standard.integer(forKey: "type")
-        self.name = UserDefaults.standard.string(forKey: "name")
-        self.rice = UserDefaults.standard.double(forKey: "rice")
-        self.waterdrop = UserDefaults.standard.double(forKey: "waterDrop")
-        self.level = Tamagotchi.getLevel(rice: self.rice, waterDrop: self.waterdrop)
+    private func saveData() {
+        UserDefaultManager.characterType = self.type
+        UserDefaultManager.characterName = self.name
+        UserDefaultManager.waterdrop = self.waterdrop
+        UserDefaultManager.rice = self.rice
     }
     
     private func updateUI() {
         self.nameLabel.text = name
         self.level = Tamagotchi.getLevel(rice: self.rice, waterDrop: self.waterdrop)
         self.statusLabel.text = "LV\(level) · 밥알 \(Int(rice))개 · 물방울 \(Int(waterdrop))개"
-        self.profileImageView.image = Tamagotchi.getProfileImage(for: type ?? 0, level: level)
+        self.profileImageView.image = Tamagotchi.getProfileImage(for: type, level: level)
     }
     
     private func configureUI() {
