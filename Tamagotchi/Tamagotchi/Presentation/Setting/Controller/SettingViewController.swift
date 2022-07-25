@@ -46,6 +46,7 @@ final class SettingViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureUI()
         self.configureNavigationBar()
     }
 }
@@ -59,9 +60,12 @@ extension SettingViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "OptionTableViewCell") as? OptionTableViewCell else {
             return UITableViewCell()
         }
+        cell.backgroundColor = .clear
+        cell.imageView?.tintColor = Color.pointColor
         cell.imageView?.image = SettingOption.allCases[indexPath.row].image
         cell.textLabel?.text = SettingOption.allCases[indexPath.row].title
         cell.detailTextLabel?.text = SettingOption.allCases[indexPath.row].detail
+        cell.detailTextLabel?.textColor = Color.pointColor
         return cell
     }
     
@@ -97,6 +101,9 @@ extension SettingViewController {
 }
 
 extension SettingViewController {
+    private func configureUI() {
+        self.view.backgroundColor = Color.backgroundColor
+    }
     private func configureNavigationBar() {
         self.title = "설정"
     }
