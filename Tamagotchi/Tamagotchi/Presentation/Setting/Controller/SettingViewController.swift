@@ -13,12 +13,14 @@ final class SettingViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.configureUI()
         self.configureNavigationBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         self.tableView.reloadData()
     }
 }
@@ -65,6 +67,7 @@ extension SettingViewController {
     }
     
     private func configureCell(_ cell: UITableViewCell, indexPath: IndexPath) {
+        cell.selectionStyle = .none
         cell.backgroundColor = .clear
         cell.imageView?.tintColor = Color.pointColor
         cell.imageView?.image = SettingOptionType.allCases[indexPath.row].image

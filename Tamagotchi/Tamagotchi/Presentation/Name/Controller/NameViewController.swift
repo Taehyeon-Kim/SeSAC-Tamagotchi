@@ -29,6 +29,7 @@ final class NameViewController: UIViewController {
 extension NameViewController {
     
     private func configureUI() {
+        self.view.backgroundColor = Color.backgroundColor
         self.configureTextField()
         self.configureNavigationBar()
     }

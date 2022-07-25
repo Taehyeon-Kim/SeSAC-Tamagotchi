@@ -87,10 +87,13 @@ extension MainViewController {
     
     private func configureLabels() {
         self.messageLabel.textColor = Color.pointColor
+        self.messageLabel.font = .boldSystemFont(ofSize: 13)
         self.nameLabel.textColor = Color.pointColor
+        self.nameLabel.font = .boldSystemFont(ofSize: 13)
         self.nameLabel.backgroundColor = Color.backgroundColor
         self.nameLabel.makeRoundedWithBorder(radius: 4, color: Color.pointColor)
-        self.nameLabel.padding(top: 0, bottom: 0, left: 6, right: 6)
+        self.nameLabel.padding(top: 6, bottom: 6, left: 8, right: 8)
+        self.statusLabel.font = .boldSystemFont(ofSize: 12)
         self.statusLabel.textColor = Color.pointColor
     }
     

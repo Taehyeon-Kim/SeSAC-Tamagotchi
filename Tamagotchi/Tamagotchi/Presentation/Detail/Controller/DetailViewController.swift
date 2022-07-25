@@ -60,12 +60,12 @@ extension DetailViewController {
     }
     
     private func configureLabels() {
-        self.nameLabel.font = .boldSystemFont(ofSize: 15)
+        self.nameLabel.font = .boldSystemFont(ofSize: 13)
         self.nameLabel.textColor = Color.pointColor
-        self.nameLabel.padding(top: 4, bottom: 4, left: 6, right: 6)
+        self.nameLabel.padding(top: 6, bottom: 6, left: 8, right: 8)
         self.nameLabel.makeRoundedWithBorder(radius: 4, color: Color.pointColor)
         
-        self.descriptionLabel.font = .systemFont(ofSize: 13)
+        self.descriptionLabel.font = .systemFont(ofSize: 12)
         self.descriptionLabel.textColor = Color.pointColor
     }
 
