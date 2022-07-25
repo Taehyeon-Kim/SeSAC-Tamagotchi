@@ -31,9 +31,15 @@ final class MainViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
         self.updateUI()
         self.configureNavigationBar()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.riceTextField.resignFirstResponder()
+        self.waterDropTextField.resignFirstResponder()
     }
     
     @IBAction func riceButtonTapped(_ sender: UIButton) {

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.configureNavigationBar()
+        self.configureKeyboard()
         return true
     }
 
@@ -34,6 +36,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func configureNavigationBar() {
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: Color.pointColor]
         UINavigationBar.appearance().tintColor = Color.pointColor
+    }
+    
+    private func configureKeyboard() {
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enableAutoToolbar = false
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
     }
 }
 
