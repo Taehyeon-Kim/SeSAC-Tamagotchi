@@ -29,6 +29,7 @@ struct UserDefaultWrapper<T> {
 
 enum UserDefaultKey: String {
     case isAppFirstLaunch
+    case characterType
     case nickname
     case characterName
     case level
@@ -39,6 +40,9 @@ enum UserDefaultKey: String {
 struct UserDefaultManager {
     @UserDefaultWrapper(key: UserDefaultKey.isAppFirstLaunch.rawValue, defaultValue: true)
     static var isAppFirstLaunch: Bool
+    
+    @UserDefaultWrapper(key: UserDefaultKey.characterType.rawValue, defaultValue: 0)
+    static var characterType: Int
     
     @UserDefaultWrapper(key: UserDefaultKey.nickname.rawValue, defaultValue: "대장")
     static var nickname: String
