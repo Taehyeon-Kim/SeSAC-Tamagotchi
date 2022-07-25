@@ -38,6 +38,7 @@
 		BDFFE3DF288E7D6C002F75D9 /* StoryboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3DE288E7D6C002F75D9 /* StoryboardManager.swift */; };
 		BDFFE3E8288EAC3C002F75D9 /* SelectSceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3E7288EAC3C002F75D9 /* SelectSceneState.swift */; };
 		BDFFE3EA288EB716002F75D9 /* FeedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3E9288EB716002F75D9 /* FeedType.swift */; };
+		BDFFE3EE288EBA1F002F75D9 /* SettingOptionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3ED288EBA1F002F75D9 /* SettingOptionType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		BDFFE3DE288E7D6C002F75D9 /* StoryboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardManager.swift; sourceTree = "<group>"; };
 		BDFFE3E7288EAC3C002F75D9 /* SelectSceneState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSceneState.swift; sourceTree = "<group>"; };
 		BDFFE3E9288EB716002F75D9 /* FeedType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedType.swift; sourceTree = "<group>"; };
+		BDFFE3ED288EBA1F002F75D9 /* SettingOptionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingOptionType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				BDFFE3BB288D4DC5002F75D9 /* TamagotchiType.swift */,
+				BDFFE3ED288EBA1F002F75D9 /* SettingOptionType.swift */,
 				BDFFE3E7288EAC3C002F75D9 /* SelectSceneState.swift */,
 				BDFFE3E9288EB716002F75D9 /* FeedType.swift */,
 			);
@@ -416,6 +419,7 @@
 				BD8333AE288A916900683E3E /* AppDelegate.swift in Sources */,
 				BDFFE3CE288DA9C6002F75D9 /* UIViewController+Extension.swift in Sources */,
 				BD8333B0288A916900683E3E /* SceneDelegate.swift in Sources */,
+				BDFFE3EE288EBA1F002F75D9 /* SettingOptionType.swift in Sources */,
 				BDFFE3C6288D947C002F75D9 /* OptionTableViewCell.swift in Sources */,
 				BD7E0AF8288B98CE000C31DF /* SelectViewController.swift in Sources */,
 				BDFFE3DF288E7D6C002F75D9 /* StoryboardManager.swift in Sources */,

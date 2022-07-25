@@ -8,41 +8,6 @@
 import UIKit
 
 final class SettingViewController: UITableViewController {
-    
-    private enum SettingOption: Int, CaseIterable {
-        case name, tamagotchi, data
-        
-        var image: UIImage? {
-            switch self {
-            case .name:
-                return UIImage(systemName: "pencil")
-            case .tamagotchi:
-                return UIImage(systemName: "moon.fill")
-            case .data:
-                return UIImage(systemName: "arrow.clockwise")
-            }
-        }
-        
-        var title: String {
-            switch self {
-            case .name:
-                return "내 이름 설정하기"
-            case .tamagotchi:
-                return "다마고치 변경하기"
-            case .data:
-                return "데이터 초기화"
-            }
-        }
-        
-        var detail: String? {
-            switch self {
-            case .name:
-                return UserDefaultManager.nickname
-            case .tamagotchi, .data:
-                return nil
-            }
-        }
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +23,7 @@ final class SettingViewController: UITableViewController {
 
 extension SettingViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return SettingOption.allCases.count
+        return SettingOptionType.allCases.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -70,7 +35,7 @@ extension SettingViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch SettingOption.allCases[indexPath.row] {
+        switch SettingOptionType.allCases[indexPath.row] {
         case .name:
             guard let nameViewController = StoryboardManager.instantiateViewController(.name, for: NameViewController.self) else { return }
             self.navigationController?.pushViewController(nameViewController, animated: true)
@@ -99,9 +64,9 @@ extension SettingViewController {
     private func configureCell(_ cell: UITableViewCell, indexPath: IndexPath) {
         cell.backgroundColor = .clear
         cell.imageView?.tintColor = Color.pointColor
-        cell.imageView?.image = SettingOption.allCases[indexPath.row].image
-        cell.textLabel?.text = SettingOption.allCases[indexPath.row].title
-        cell.detailTextLabel?.text = SettingOption.allCases[indexPath.row].detail
+        cell.imageView?.image = SettingOptionType.allCases[indexPath.row].image
+        cell.textLabel?.text = SettingOptionType.allCases[indexPath.row].title
+        cell.detailTextLabel?.text = SettingOptionType.allCases[indexPath.row].detail
         cell.detailTextLabel?.textColor = Color.pointColor
     }
     
