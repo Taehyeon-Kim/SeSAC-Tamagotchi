@@ -9,7 +9,7 @@ import UIKit
 
 final class DetailViewController: UIViewController {
     
-    var type: SelectType?
+    var type: SelectSceneState?
     var tamagotchi: Tamagotchi?
 
     @IBOutlet weak var containerView: UIView!

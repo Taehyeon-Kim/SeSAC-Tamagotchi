@@ -7,31 +7,9 @@
 
 import UIKit
 
-enum SelectType {
-    case select, edit
-    
-    var title: String {
-        switch self {
-        case .select:
-            return "다마고치 선택하기"
-        case .edit:
-            return "다마고치 변경하기"
-        }
-    }
-    
-    var buttonTitle: String {
-        switch self {
-        case .select:
-            return "시작하기"
-        case .edit:
-            return "변경하기"
-        }
-    }
-}
-
 final class SelectViewController: UICollectionViewController {
     
-    var type: SelectType = .select
+    var type: SelectSceneState = .select
     private let spacing: CGFloat = 20
     private let tamagotchiList: [Tamagotchi] = Tamagotchi.list
     

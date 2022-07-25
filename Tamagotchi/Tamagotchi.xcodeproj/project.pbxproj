@@ -36,6 +36,7 @@
 		BDFFE3D0288E68BE002F75D9 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3CF288E68BE002F75D9 /* UIView+Extension.swift */; };
 		BDFFE3D4288E77B3002F75D9 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3D3288E77B3002F75D9 /* UserDefaultManager.swift */; };
 		BDFFE3DF288E7D6C002F75D9 /* StoryboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3DE288E7D6C002F75D9 /* StoryboardManager.swift */; };
+		BDFFE3E8288EAC3C002F75D9 /* SelectSceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3E7288EAC3C002F75D9 /* SelectSceneState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		BDFFE3CF288E68BE002F75D9 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		BDFFE3D3288E77B3002F75D9 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		BDFFE3DE288E7D6C002F75D9 /* StoryboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardManager.swift; sourceTree = "<group>"; };
+		BDFFE3E7288EAC3C002F75D9 /* SelectSceneState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSceneState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				BDFFE3BB288D4DC5002F75D9 /* TamagotchiType.swift */,
+				BDFFE3E7288EAC3C002F75D9 /* SelectSceneState.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDFFE3BC288D4DC5002F75D9 /* TamagotchiType.swift in Sources */,
+				BDFFE3E8288EAC3C002F75D9 /* SelectSceneState.swift in Sources */,
 				BDFFE3BA288D46D0002F75D9 /* TamagotchiCollectionViewCell.swift in Sources */,
 				BDFFE3D0288E68BE002F75D9 /* UIView+Extension.swift in Sources */,
 				BD8333AE288A916900683E3E /* AppDelegate.swift in Sources */,
