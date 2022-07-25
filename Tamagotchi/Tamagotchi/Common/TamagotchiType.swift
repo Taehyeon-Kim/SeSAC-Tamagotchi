@@ -7,11 +7,11 @@
 
 import UIKit
 
-enum TamagotchiType: CaseIterable {
-    case ddaggeum
-    case bangsil
-    case banzzak
-    case preparing
+enum TamagotchiType: Int, CaseIterable {
+    case ddaggeum = 1
+    case bangsil = 2
+    case banzzak = 3
+    case preparing = 0
     
     var profileImage: UIImage? {
         switch self {

@@ -29,9 +29,7 @@ final class TamagotchiCollectionViewCell: UICollectionViewCell {
     }
     
     func configureData(_ data: Tamagotchi) {
-        if let profileImage = data.profileImage {
-            self.profileImageView.image = profileImage
-        }
+        self.profileImageView.image = data.getInitialProfileImage()
         self.nameLabel.text = data.name
     }
 }

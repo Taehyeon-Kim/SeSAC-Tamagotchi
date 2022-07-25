@@ -31,7 +31,7 @@ final class MainViewController: UIViewController {
 extension MainViewController {
     private func loadData() {
         let name = UserDefaults.standard.string(forKey: "name")
-        let level = UserDefaults.standard.double(forKey: "level")
+        let level = UserDefaults.standard.integer(forKey: "level")
         let rice = UserDefaults.standard.double(forKey: "rice")
         let waterDrop = UserDefaults.standard.double(forKey: "waterDrop")
         
