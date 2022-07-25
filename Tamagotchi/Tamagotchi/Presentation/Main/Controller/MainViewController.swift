@@ -38,7 +38,11 @@ final class MainViewController: UIViewController {
     
     @IBAction func riceButtonTapped(_ sender: UIButton) {
         if let rice = Double(riceTextField.text!) {
-            self.rice += rice
+            if 0 <= rice && rice < 100 {
+                self.rice += rice
+            } else {
+                self.view.makeToast("0부터 100개 이하의 밥만 먹일 수 있어요😭")
+            }
         } else if !riceTextField.hasText {
             self.rice += 1
         }
@@ -49,10 +53,16 @@ final class MainViewController: UIViewController {
     
     @IBAction func waterdropButtonTapped(_ sender: UIButton) {
         if let waterdrop = Double(waterDropTextField.text!) {
-            self.waterdrop += waterdrop
-        } else if !waterDropTextField.hasText {
+            if 0 <= waterdrop && waterdrop < 50 {
+                self.waterdrop += waterdrop
+            } else {
+                self.view.makeToast("0부터 50개 이하의 물방울만 먹일 수 있어요😭")
+            }
+        }
+        else if !waterDropTextField.hasText {
             self.waterdrop += 1
         }
+        
         self.waterDropTextField.text = ""
         self.updateUI()
         self.saveData()
