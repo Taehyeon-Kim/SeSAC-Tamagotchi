@@ -48,7 +48,7 @@ extension DetailViewController {
     }
     
     private func configureData() {
-        self.profileImageView.image = tamagotchi?.getProfileImage()
+        self.profileImageView.image = tamagotchi?.getInitialProfileImage()
         self.nameLabel.text = tamagotchi?.name
         self.descriptionLabel.text = tamagotchi?.description
     }
@@ -79,8 +79,8 @@ extension DetailViewController {
     }
     
     private func saveData() {
+        UserDefaults.standard.set(tamagotchi?.type.rawValue, forKey: "type")
         UserDefaults.standard.set(tamagotchi?.name, forKey: "name")
-        UserDefaults.standard.set(tamagotchi?.getLevel(), forKey: "level")
         UserDefaults.standard.set(tamagotchi?.waterDrop, forKey: "waterDrop")
         UserDefaults.standard.set(tamagotchi?.rice, forKey: "rice")
     }

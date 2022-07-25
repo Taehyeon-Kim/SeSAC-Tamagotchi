@@ -17,7 +17,7 @@ struct Tamagotchi {
 }
 
 extension Tamagotchi {
-    func getLevel() -> Int {
+    static func getLevel(rice: Double, waterDrop: Double) -> Int {
         let total = (rice / 5) + (waterDrop / 2)
         
         if 0 <= total && total < 20 {
@@ -54,10 +54,12 @@ extension Tamagotchi {
         }
     }
     
-    func getProfileImage() -> UIImage? {
-        let typeNumber = self.type.rawValue
-        let level = self.getLevel()
-        return UIImage(named: "\(typeNumber)-\(level)")
+    static func getProfileImage(for type: Int, level: Int) -> UIImage? {
+        if level == 10 {
+            return UIImage(named: "\(type)-9")
+        } else {
+            return UIImage(named: "\(type)-\(level)")
+        }
     }
 }
 

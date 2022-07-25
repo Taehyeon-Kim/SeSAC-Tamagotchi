@@ -10,6 +10,11 @@ import UIKit
 final class MainViewController: UIViewController {
     
     var nickname: String?
+    private var type: Int?
+    private var name: String?
+    private var level: Int = 0
+    private var rice: Double = 0
+    private var waterdrop: Double = 0
 
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
@@ -25,18 +30,40 @@ final class MainViewController: UIViewController {
         self.configureUI()
         self.configureNavigationBar()
         self.loadData()
+        self.updateUI()
+    }
+    
+    @IBAction func riceButtonTapped(_ sender: UIButton) {
+        if let rice = Double(riceTextField.text!) {
+            self.rice += rice
+        }
+        self.riceTextField.text = ""
+        self.updateUI()
+    }
+    
+    @IBAction func waterdropButtonTapped(_ sender: UIButton) {
+        if let waterdrop = Double(waterDropTextField.text!) {
+            self.waterdrop += waterdrop
+        }
+        self.waterDropTextField.text = ""
+        self.updateUI()
     }
 }
 
 extension MainViewController {
     private func loadData() {
-        let name = UserDefaults.standard.string(forKey: "name")
-        let level = UserDefaults.standard.integer(forKey: "level")
-        let rice = UserDefaults.standard.double(forKey: "rice")
-        let waterDrop = UserDefaults.standard.double(forKey: "waterDrop")
-        
+        self.type = UserDefaults.standard.integer(forKey: "type")
+        self.name = UserDefaults.standard.string(forKey: "name")
+        self.rice = UserDefaults.standard.double(forKey: "rice")
+        self.waterdrop = UserDefaults.standard.double(forKey: "waterDrop")
+        self.level = Tamagotchi.getLevel(rice: self.rice, waterDrop: self.waterdrop)
+    }
+    
+    private func updateUI() {
         self.nameLabel.text = name
-        self.statusLabel.text = "LV\(level) · 밥알 \(rice)개 · 물방울 \(waterDrop)개"
+        self.level = Tamagotchi.getLevel(rice: self.rice, waterDrop: self.waterdrop)
+        self.statusLabel.text = "LV\(level) · 밥알 \(Int(rice))개 · 물방울 \(Int(waterdrop))개"
+        self.profileImageView.image = Tamagotchi.getProfileImage(for: type ?? 0, level: level)
     }
     
     private func configureUI() {

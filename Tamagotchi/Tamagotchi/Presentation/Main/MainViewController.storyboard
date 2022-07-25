@@ -41,18 +41,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="VKk-9z-vcm">
-                                <rect key="frame" x="50" y="571" width="314" height="76"/>
+                                <rect key="frame" x="60" y="571" width="294" height="76"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fda-ay-2VJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="32"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="밥주세요" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X0Y-FU-cyS">
-                                                <rect key="frame" x="0.0" y="0.0" width="234" height="32"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="214" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7LM-P1-XFi">
-                                                <rect key="frame" x="244" y="0.0" width="70" height="32"/>
+                                                <rect key="frame" x="224" y="0.0" width="70" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="zvz-NE-TUv"/>
                                                 </constraints>
@@ -61,6 +61,9 @@
                                                 <state key="normal" title="밥먹기" image="leaf.circle" catalog="system">
                                                     <color key="titleColor" red="0.30196078430000001" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="riceButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rE8-lc-GWC"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -68,15 +71,15 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2gl-wU-IK2">
-                                        <rect key="frame" x="0.0" y="44" width="314" height="32"/>
+                                        <rect key="frame" x="0.0" y="44" width="294" height="32"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="물주세요" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1BW-8Q-MaW">
-                                                <rect key="frame" x="0.0" y="0.0" width="234" height="32"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="214" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mJ-bk-DY6">
-                                                <rect key="frame" x="244" y="0.0" width="70" height="32"/>
+                                                <rect key="frame" x="224" y="0.0" width="70" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="7Qx-wM-Twa"/>
                                                 </constraints>
@@ -86,6 +89,9 @@
                                                 <state key="normal" title="물먹기" image="drop.circle" catalog="system">
                                                     <color key="titleColor" red="0.30196078430000001" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="waterdropButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kt4-fA-RcG"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -110,11 +116,11 @@
                             <constraint firstItem="PF5-Xk-9yI" firstAttribute="centerX" secondItem="rnU-Qu-Xrl" secondAttribute="centerX" id="Epk-wv-Zbj"/>
                             <constraint firstItem="gUR-Bx-213" firstAttribute="top" secondItem="PF5-Xk-9yI" secondAttribute="bottom" constant="12" id="GqI-j2-YBt"/>
                             <constraint firstItem="DLL-dl-uUz" firstAttribute="top" secondItem="rnU-Qu-Xrl" secondAttribute="top" constant="20" id="I7O-cA-7ZS"/>
-                            <constraint firstItem="VKk-9z-vcm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="IKC-LS-RsD"/>
+                            <constraint firstItem="VKk-9z-vcm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="IKC-LS-RsD"/>
                             <constraint firstItem="PF5-Xk-9yI" firstAttribute="top" secondItem="rnU-Qu-Xrl" secondAttribute="bottom" constant="12" id="Kz1-cb-O9v"/>
                             <constraint firstItem="rnU-Qu-Xrl" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.7" id="WC8-P2-sAr"/>
                             <constraint firstItem="rnU-Qu-Xrl" firstAttribute="trailing" secondItem="DLL-dl-uUz" secondAttribute="trailing" constant="20" id="aNs-Yq-ILd"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="VKk-9z-vcm" secondAttribute="trailing" constant="50" id="d0w-ox-Bbh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="VKk-9z-vcm" secondAttribute="trailing" constant="60" id="d0w-ox-Bbh"/>
                             <constraint firstItem="rnU-Qu-Xrl" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="eLM-Ew-SgS"/>
                             <constraint firstItem="gUR-Bx-213" firstAttribute="centerX" secondItem="PF5-Xk-9yI" secondAttribute="centerX" id="eeW-Ps-GnR"/>
                             <constraint firstItem="rnU-Qu-Xrl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="j6A-Ae-lkk"/>
