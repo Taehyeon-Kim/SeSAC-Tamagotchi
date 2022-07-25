@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Toast
 
 final class NameViewController: UIViewController {
     
@@ -35,9 +36,11 @@ extension NameViewController {
     }
     
     @objc func saveButtonTapped() {
-        if let nickname = nameTextField.text {
+        if let nickname = nameTextField.text, (2...6).contains(nickname.count) {
             UserDefaultManager.nickname = nickname
             self.navigationController?.popViewController(animated: true)
+        } else {
+            self.view.makeToast("2글자 이상 6글자 이하의 닉네임을 입력해주세요!")
         }
     }
 }
