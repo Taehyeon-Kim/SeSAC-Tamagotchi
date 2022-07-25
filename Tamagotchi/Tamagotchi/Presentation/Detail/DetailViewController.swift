@@ -79,6 +79,9 @@ extension DetailViewController {
     }
     
     private func saveData() {
-        UserDefaults.standard.set(tamagotchi, forKey: "tamagotchiData")
+        UserDefaults.standard.set(tamagotchi?.name, forKey: "name")
+        UserDefaults.standard.set(tamagotchi?.level, forKey: "level")
+        UserDefaults.standard.set(tamagotchi?.waterDrop, forKey: "waterDrop")
+        UserDefaults.standard.set(tamagotchi?.rice, forKey: "rice")
     }
 }
