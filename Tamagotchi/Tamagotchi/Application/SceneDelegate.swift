@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window?.rootViewController = UINavigationController(rootViewController: rootViewController)
         } else {
             guard let rootViewController = UIStoryboard(name: "SelectViewController", bundle: nil).instantiateViewController(withIdentifier: "SelectViewController") as? SelectViewController else { return }
-            self.window?.rootViewController = rootViewController
+            self.window?.rootViewController = UINavigationController(rootViewController: rootViewController)
         }
         
         self.window?.makeKeyAndVisible()
