@@ -78,7 +78,5 @@ extension DetailViewController {
         UserDefaultManager.isAppFirstLaunch = false
         UserDefaultManager.characterType = tamagotchi?.type.rawValue ?? 0
         UserDefaultManager.characterName = tamagotchi?.name ?? ""
-        UserDefaultManager.waterdrop = tamagotchi?.waterDrop ?? 0
-        UserDefaultManager.rice = tamagotchi?.rice ?? 0
     }
 }
