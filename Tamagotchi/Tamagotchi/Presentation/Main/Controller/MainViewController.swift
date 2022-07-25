@@ -9,11 +9,15 @@ import UIKit
 
 final class MainViewController: UIViewController {
 
+    // MARK: - Properties
+    
     private var type: Int = UserDefaultManager.characterType
     private var name: String = UserDefaultManager.characterName
     private var level: Int = UserDefaultManager.level
     private var rice: Double = UserDefaultManager.rice
     private var waterdrop: Double = UserDefaultManager.waterdrop
+    
+    // MARK: - Outlets
 
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
@@ -24,64 +28,46 @@ final class MainViewController: UIViewController {
     @IBOutlet weak var waterDropTextField: UITextField!
     @IBOutlet weak var waterDropButton: UIButton!
     
+    // MARK: - Life Cycle Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.configureUI()
-        self.configureNavigationBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         self.updateUI()
         self.configureNavigationBar()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
         self.riceTextField.resignFirstResponder()
         self.waterDropTextField.resignFirstResponder()
     }
     
+    // MARK: - Actions
+    
     @IBAction func riceButtonTapped(_ sender: UIButton) {
-        if let rice = Double(riceTextField.text!) {
-            if 0 <= rice && rice < 100 {
-                self.rice += rice
-            } else {
-                self.view.makeToast("0부터 100개 이하의 밥만 먹일 수 있어요😭")
-            }
-        } else if !riceTextField.hasText {
-            self.rice += 1
-        }
-        self.riceTextField.text = ""
-        self.updateUI()
+        self.feed(riceTextField, for: .rice)
         self.saveData()
+        self.updateUI()
     }
     
     @IBAction func waterdropButtonTapped(_ sender: UIButton) {
-        if let waterdrop = Double(waterDropTextField.text!) {
-            if 0 <= waterdrop && waterdrop < 50 {
-                self.waterdrop += waterdrop
-            } else {
-                self.view.makeToast("0부터 50개 이하의 물방울만 먹일 수 있어요😭")
-            }
-        }
-        else if !waterDropTextField.hasText {
-            self.waterdrop += 1
-        }
-        
-        self.waterDropTextField.text = ""
-        self.updateUI()
+        self.feed(waterDropTextField, for: .waterdrop)
         self.saveData()
+        self.updateUI()
     }
 }
 
+// MARK: - Methods
+
 extension MainViewController {
-    private func saveData() {
-        UserDefaultManager.characterType = self.type
-        UserDefaultManager.characterName = self.name
-        UserDefaultManager.waterdrop = self.waterdrop
-        UserDefaultManager.rice = self.rice
-    }
     
     private func updateUI() {
         self.nameLabel.text = name
@@ -96,6 +82,7 @@ extension MainViewController {
         self.configureLabels()
         self.configureTextFields()
         self.configureButtons()
+        self.configureNavigationBar()
     }
     
     private func configureLabels() {
@@ -112,6 +99,7 @@ extension MainViewController {
         self.waterDropTextField.placeholder = "물주세요"
         [self.riceTextField, self.waterDropTextField].forEach {
             $0?.textAlignment = .center
+            $0?.keyboardType = .numberPad
             $0?.drawUnderLine()
         }
     }
@@ -132,5 +120,38 @@ extension MainViewController {
         guard let settingViewController = StoryboardManager.instantiateViewController(.setting, for: SettingViewController.self) else { return }
         self.navigationItem.backButtonTitle = ""
         self.navigationController?.pushViewController(settingViewController, animated: true)
+    }
+    
+    private func feed(_ textField: UITextField, for feedType: FeedType) {
+        guard let value = textField.text else { return }
+        let limit = feedType == .rice ? 100.0 : 50.0
+        
+        if let feedCount = Double(value) {
+            if 0 <= feedCount && feedCount < limit {
+                if feedType == .rice {
+                    self.rice += feedCount
+                } else if feedType == .waterdrop {
+                    self.waterdrop += feedCount
+                }
+            } else {
+                self.view.makeToast("0부터 \(Int(limit))개 이하만 먹일 수 있어요😭")
+            }
+        } else if !textField.hasText {
+            if feedType == .rice {
+                self.rice += 1
+            } else if feedType == .waterdrop {
+                self.waterdrop += 1
+            }
+        }
+        
+        textField.text = ""
+        textField.resignFirstResponder()
+    }
+    
+    private func saveData() {
+        UserDefaultManager.characterType = self.type
+        UserDefaultManager.characterName = self.name
+        UserDefaultManager.waterdrop = self.waterdrop
+        UserDefaultManager.rice = self.rice
     }
 }

@@ -37,6 +37,7 @@
 		BDFFE3D4288E77B3002F75D9 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3D3288E77B3002F75D9 /* UserDefaultManager.swift */; };
 		BDFFE3DF288E7D6C002F75D9 /* StoryboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3DE288E7D6C002F75D9 /* StoryboardManager.swift */; };
 		BDFFE3E8288EAC3C002F75D9 /* SelectSceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3E7288EAC3C002F75D9 /* SelectSceneState.swift */; };
+		BDFFE3EA288EB716002F75D9 /* FeedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3E9288EB716002F75D9 /* FeedType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		BDFFE3D3288E77B3002F75D9 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		BDFFE3DE288E7D6C002F75D9 /* StoryboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardManager.swift; sourceTree = "<group>"; };
 		BDFFE3E7288EAC3C002F75D9 /* SelectSceneState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSceneState.swift; sourceTree = "<group>"; };
+		BDFFE3E9288EB716002F75D9 /* FeedType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +265,7 @@
 			children = (
 				BDFFE3BB288D4DC5002F75D9 /* TamagotchiType.swift */,
 				BDFFE3E7288EAC3C002F75D9 /* SelectSceneState.swift */,
+				BDFFE3E9288EB716002F75D9 /* FeedType.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				BD7E0AFA288B98F3000C31DF /* SettingViewController.swift in Sources */,
 				BDFFE3D4288E77B3002F75D9 /* UserDefaultManager.swift in Sources */,
 				BD7E0AEE288B988D000C31DF /* MainViewController.swift in Sources */,
+				BDFFE3EA288EB716002F75D9 /* FeedType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
