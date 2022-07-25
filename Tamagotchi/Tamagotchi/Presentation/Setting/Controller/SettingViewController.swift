@@ -60,12 +60,7 @@ extension SettingViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "OptionTableViewCell") as? OptionTableViewCell else {
             return UITableViewCell()
         }
-        cell.backgroundColor = .clear
-        cell.imageView?.tintColor = Color.pointColor
-        cell.imageView?.image = SettingOption.allCases[indexPath.row].image
-        cell.textLabel?.text = SettingOption.allCases[indexPath.row].title
-        cell.detailTextLabel?.text = SettingOption.allCases[indexPath.row].detail
-        cell.detailTextLabel?.textColor = Color.pointColor
+        self.configureCell(cell, indexPath: indexPath)
         return cell
     }
     
@@ -80,13 +75,36 @@ extension SettingViewController {
         case .data:
             self.makeAlert(title: "데이터 초기화", message: "정말 다시 처음부터 시작하실 건가요?", cancelTitle: "아니", confirmTitle: "응", cancelHandler: nil) {
                 self.resetData()
-                let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
-                let sceneDelegate = windowScene?.delegate as? SceneDelegate
-                guard let selectViewController = StoryboardManager.instantiateViewController(.select, for: SelectViewController.self) else { return }
-                sceneDelegate?.window?.rootViewController = UINavigationController(rootViewController: selectViewController)
-                sceneDelegate?.window?.makeKeyAndVisible()
+                self.changeRootViewController()
             }
         }
+    }
+}
+
+extension SettingViewController {
+    private func configureUI() {
+        self.view.backgroundColor = Color.backgroundColor
+    }
+    
+    private func configureNavigationBar() {
+        self.title = "설정"
+    }
+    
+    private func configureCell(_ cell: UITableViewCell, indexPath: IndexPath) {
+        cell.backgroundColor = .clear
+        cell.imageView?.tintColor = Color.pointColor
+        cell.imageView?.image = SettingOption.allCases[indexPath.row].image
+        cell.textLabel?.text = SettingOption.allCases[indexPath.row].title
+        cell.detailTextLabel?.text = SettingOption.allCases[indexPath.row].detail
+        cell.detailTextLabel?.textColor = Color.pointColor
+    }
+    
+    private func changeRootViewController() {
+        let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        let sceneDelegate = windowScene?.delegate as? SceneDelegate
+        guard let selectViewController = StoryboardManager.instantiateViewController(.select, for: SelectViewController.self) else { return }
+        sceneDelegate?.window?.rootViewController = UINavigationController(rootViewController: selectViewController)
+        sceneDelegate?.window?.makeKeyAndVisible()
     }
     
     private func resetData() {
@@ -97,14 +115,5 @@ extension SettingViewController {
         UserDefaultManager.level = 1
         UserDefaultManager.rice = 0
         UserDefaultManager.waterdrop = 0
-    }
-}
-
-extension SettingViewController {
-    private func configureUI() {
-        self.view.backgroundColor = Color.backgroundColor
-    }
-    private func configureNavigationBar() {
-        self.title = "설정"
     }
 }
