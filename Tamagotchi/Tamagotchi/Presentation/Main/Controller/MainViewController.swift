@@ -39,6 +39,8 @@ final class MainViewController: UIViewController {
     @IBAction func riceButtonTapped(_ sender: UIButton) {
         if let rice = Double(riceTextField.text!) {
             self.rice += rice
+        } else if !riceTextField.hasText {
+            self.rice += 1
         }
         self.riceTextField.text = ""
         self.updateUI()
@@ -48,6 +50,8 @@ final class MainViewController: UIViewController {
     @IBAction func waterdropButtonTapped(_ sender: UIButton) {
         if let waterdrop = Double(waterDropTextField.text!) {
             self.waterdrop += waterdrop
+        } else if !waterDropTextField.hasText {
+            self.waterdrop += 1
         }
         self.waterDropTextField.text = ""
         self.updateUI()
