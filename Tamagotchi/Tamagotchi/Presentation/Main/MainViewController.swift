@@ -41,6 +41,12 @@ extension MainViewController {
     
     private func configureUI() {
         self.view.backgroundColor = Color.backgroundColor
+        self.configureLabels()
+        self.configureTextFields()
+        self.configureButtons()
+    }
+    
+    private func configureLabels() {
         self.messageLabel.textColor = Color.pointColor
         self.nameLabel.textColor = Color.pointColor
         self.nameLabel.backgroundColor = Color.backgroundColor
@@ -49,12 +55,18 @@ extension MainViewController {
         self.nameLabel.layer.cornerRadius = 4
         self.nameLabel.padding(top: 0, bottom: 0, left: 6, right: 6)
         self.statusLabel.textColor = Color.pointColor
+    }
+    
+    private func configureTextFields() {
         self.riceTextField.placeholder = "밥주세요"
         self.waterDropTextField.placeholder = "물주세요"
         [self.riceTextField, self.waterDropTextField].forEach {
             $0?.textAlignment = .center
             $0?.drawUnderLine()
         }
+    }
+    
+    private func configureButtons() {
         [self.riceButton, self.waterDropButton].forEach {
             $0?.setTitleColor(Color.pointColor, for: .normal)
             $0?.layer.borderColor = Color.pointColor.cgColor
