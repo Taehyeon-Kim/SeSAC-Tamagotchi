@@ -77,9 +77,7 @@ extension MainViewController {
         self.messageLabel.textColor = Color.pointColor
         self.nameLabel.textColor = Color.pointColor
         self.nameLabel.backgroundColor = Color.backgroundColor
-        self.nameLabel.layer.borderColor = Color.pointColor.cgColor
-        self.nameLabel.layer.borderWidth = 1
-        self.nameLabel.layer.cornerRadius = 4
+        self.nameLabel.makeRoundedWithBorder(radius: 4, color: Color.pointColor)
         self.nameLabel.padding(top: 0, bottom: 0, left: 6, right: 6)
         self.statusLabel.textColor = Color.pointColor
     }
@@ -96,9 +94,7 @@ extension MainViewController {
     private func configureButtons() {
         [self.riceButton, self.waterDropButton].forEach {
             $0?.setTitleColor(Color.pointColor, for: .normal)
-            $0?.layer.borderColor = Color.pointColor.cgColor
-            $0?.layer.borderWidth = 1
-            $0?.layer.cornerRadius = 4
+            $0?.makeRoundedWithBorder(radius: 4, color: Color.pointColor)
         }
     }
     

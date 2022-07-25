@@ -62,9 +62,7 @@ extension DetailViewController {
         self.nameLabel.padding(top: 4, bottom: 4, left: 6, right: 6)
         self.nameLabel.font = .boldSystemFont(ofSize: 15)
         self.nameLabel.textColor = Color.pointColor
-        self.nameLabel.layer.borderColor = Color.pointColor.cgColor
-        self.nameLabel.layer.borderWidth = 1
-        self.nameLabel.layer.cornerRadius = 4
+        self.nameLabel.makeRoundedWithBorder(radius: 4, color: Color.pointColor)
         self.descriptionLabel.textColor = Color.pointColor
         self.descriptionLabel.font = .systemFont(ofSize: 13)
     }
@@ -72,10 +70,8 @@ extension DetailViewController {
     private func configureButtons() {
         self.cancelButton.setTitleColor(Color.pointColor, for: .normal)
         self.startButton.setTitleColor(Color.pointColor, for: .normal)
-        self.cancelButton.layer.borderColor = Color.pointColor.cgColor
-        self.cancelButton.layer.borderWidth = 0.5
-        self.startButton.layer.borderColor = Color.pointColor.cgColor
-        self.startButton.layer.borderWidth = 0.5
+        self.cancelButton.makeBorder(color: Color.pointColor, borderWith: 0.5)
+        self.startButton.makeBorder(color: Color.pointColor, borderWith: 0.5)
     }
     
     private func saveData() {
