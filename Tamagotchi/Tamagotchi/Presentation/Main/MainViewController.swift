@@ -104,7 +104,7 @@ extension MainViewController {
     }
     
     @objc func transitionToSettingViewController() {
-        guard let settingViewController = UIStoryboard(name: "SettingViewController", bundle: nil).instantiateViewController(withIdentifier: "SettingViewController") as? SettingViewController else { return }
+        guard let settingViewController = StoryboardManager.instantiateViewController(.setting, for: SettingViewController.self) else { return }
         self.navigationItem.backButtonTitle = ""
         self.navigationController?.pushViewController(settingViewController, animated: true)
     }

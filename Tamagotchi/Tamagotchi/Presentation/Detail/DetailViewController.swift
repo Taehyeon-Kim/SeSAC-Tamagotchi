@@ -32,10 +32,8 @@ final class DetailViewController: UIViewController {
         self.saveData()
         let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
         let sceneDelegate = windowScene?.delegate as? SceneDelegate
-       
-        guard let rootViewController = UIStoryboard(name: "MainViewController", bundle: nil).instantiateViewController(withIdentifier: "MainViewController") as? MainViewController else { return }
-
-        sceneDelegate?.window?.rootViewController = UINavigationController(rootViewController: rootViewController)
+        guard let mainViewController = StoryboardManager.instantiateViewController(.main, for: MainViewController.self) else { return }
+        sceneDelegate?.window?.rootViewController = UINavigationController(rootViewController: mainViewController)
         sceneDelegate?.window?.makeKeyAndVisible()
     }
 }

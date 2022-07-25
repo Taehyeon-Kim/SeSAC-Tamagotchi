@@ -64,7 +64,7 @@ extension SelectViewController {
         if tamagotchiList[indexPath.row].type == .preparing {
             self.makeAlert(title: "캐릭터가 준비중이에요!", message: nil, confirmTitle: "확인")
         } else {
-            guard let detailViewController = UIStoryboard(name: "DetailViewController", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
+            guard let detailViewController = StoryboardManager.instantiateViewController(.detail, for: DetailViewController.self) else { return }
             detailViewController.modalPresentationStyle = .overFullScreen
             detailViewController.modalTransitionStyle = .crossDissolve
             detailViewController.tamagotchi = tamagotchiList[indexPath.row]
