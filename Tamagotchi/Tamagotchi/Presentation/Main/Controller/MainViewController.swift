@@ -28,11 +28,11 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         self.configureUI()
         self.configureNavigationBar()
-        self.updateUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        self.updateUI()
         self.configureNavigationBar()
     }
     
@@ -65,6 +65,7 @@ extension MainViewController {
     
     private func updateUI() {
         self.nameLabel.text = name
+        self.messageLabel.text = Tamagotchi.message.randomElement()
         self.level = Tamagotchi.getLevel(rice: self.rice, waterDrop: self.waterdrop)
         self.statusLabel.text = "LV\(level) · 밥알 \(Int(rice))개 · 물방울 \(Int(waterdrop))개"
         self.profileImageView.image = Tamagotchi.getProfileImage(for: type, level: level)
