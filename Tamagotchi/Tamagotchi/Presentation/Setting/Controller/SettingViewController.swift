@@ -9,6 +9,8 @@ import UIKit
 
 final class SettingViewController: UITableViewController {
 
+    // MARK: - Life Cycle Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureUI()
@@ -20,6 +22,8 @@ final class SettingViewController: UITableViewController {
         self.tableView.reloadData()
     }
 }
+
+// MARK: - TableView Methods
 
 extension SettingViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,12 +41,9 @@ extension SettingViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch SettingOptionType.allCases[indexPath.row] {
         case .name:
-            guard let nameViewController = StoryboardManager.instantiateViewController(.name, for: NameViewController.self) else { return }
-            self.navigationController?.pushViewController(nameViewController, animated: true)
+            self.transitionToNameViewController()
         case .tamagotchi:
-            guard let selectViewController = StoryboardManager.instantiateViewController(.select, for: SelectViewController.self) else { return }
-            selectViewController.type = .change
-            self.navigationController?.pushViewController(selectViewController, animated: true)
+            self.transitionToSelectViewController()
         case .data:
             self.makeAlert(title: "데이터 초기화", message: "정말 다시 처음부터 시작하실 건가요?", cancelTitle: "아니", confirmTitle: "응", cancelHandler: nil) {
                 self.resetData()
@@ -51,6 +52,8 @@ extension SettingViewController {
         }
     }
 }
+
+// MARK: - Methods
 
 extension SettingViewController {
     private func configureUI() {
@@ -76,6 +79,17 @@ extension SettingViewController {
         guard let selectViewController = StoryboardManager.instantiateViewController(.select, for: SelectViewController.self) else { return }
         sceneDelegate?.window?.rootViewController = UINavigationController(rootViewController: selectViewController)
         sceneDelegate?.window?.makeKeyAndVisible()
+    }
+    
+    private func transitionToNameViewController() {
+        guard let nameViewController = StoryboardManager.instantiateViewController(.name, for: NameViewController.self) else { return }
+        self.navigationController?.pushViewController(nameViewController, animated: true)
+    }
+    
+    private func transitionToSelectViewController() {
+        guard let selectViewController = StoryboardManager.instantiateViewController(.select, for: SelectViewController.self) else { return }
+        selectViewController.type = .change
+        self.navigationController?.pushViewController(selectViewController, animated: true)
     }
     
     private func resetData() {
