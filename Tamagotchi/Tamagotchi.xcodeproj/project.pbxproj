@@ -113,7 +113,6 @@
 		BD7E0ADB288B964E000C31DF /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				BDFFE3C1288D7A13002F75D9 /* Color */,
 				BD8333B6288A916D00683E3E /* Assets.xcassets */,
 				BD8333B3288A916900683E3E /* Main.storyboard */,
 				BD8333B8288A916D00683E3E /* LaunchScreen.storyboard */,
@@ -132,6 +131,7 @@
 		BD7E0ADD288B9661000C31DF /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BDFFE3D9288E7C0D002F75D9 /* NameSpace */,
 				BDFFE3D8288E7BEC002F75D9 /* Enum */,
 				BDFFE3D5288E7BAB002F75D9 /* Extension */,
 				BDFFE3D7288E7BE6002F75D9 /* Manager */,
@@ -224,14 +224,6 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		BDFFE3C1288D7A13002F75D9 /* Color */ = {
-			isa = PBXGroup;
-			children = (
-				BDFFE3C2288D7A1B002F75D9 /* Color.swift */,
-			);
-			path = Color;
-			sourceTree = "<group>";
-		};
 		BDFFE3C4288D946A002F75D9 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +264,14 @@
 				BDFFE3BB288D4DC5002F75D9 /* TamagotchiType.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		BDFFE3D9288E7C0D002F75D9 /* NameSpace */ = {
+			isa = PBXGroup;
+			children = (
+				BDFFE3C2288D7A1B002F75D9 /* Color.swift */,
+			);
+			path = NameSpace;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
