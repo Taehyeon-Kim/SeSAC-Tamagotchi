@@ -20,28 +20,27 @@ extension Tamagotchi {
     static func getLevel(rice: Double, waterDrop: Double) -> Int {
         let total = (rice / 5) + (waterDrop / 2)
         
-        if 0 <= total && total < 20 {
+        switch total {
+        case 0..<20:
             return 1
-        } else if 20 <= total && total < 30  {
+        case 20..<30:
             return 2
-        } else if 30 <= total && total < 40  {
+        case 30..<40:
             return 3
-        } else if 40 <= total && total < 50  {
+        case 40..<50:
             return 4
-        } else if 50 <= total && total < 60  {
+        case 50..<60:
             return 5
-        } else if 60 <= total && total < 70  {
+        case 60..<70:
             return 6
-        } else if 70 <= total && total < 80  {
+        case 70..<80:
             return 7
-        } else if 80 <= total && total < 90  {
+        case 80..<90:
             return 8
-        } else if 90 <= total && total < 100  {
+        case 90..<100:
             return 9
-        } else if 100 <= total {
+        default:        // 과연 나머지 처리를 이렇게 하는 것이 맞을까?
             return 10
-        } else {
-            return 0
         }
     }
     
