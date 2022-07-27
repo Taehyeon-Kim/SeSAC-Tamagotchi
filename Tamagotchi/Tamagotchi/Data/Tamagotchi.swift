@@ -19,28 +19,14 @@ struct Tamagotchi {
 extension Tamagotchi {
     static func getLevel(rice: Double, waterDrop: Double) -> Int {
         let total = (rice / 5) + (waterDrop / 2)
+        let totalDividedByTen = Int(total / 10)
         
-        switch total {
-        case 0..<20:
+        if totalDividedByTen == 0 {
             return 1
-        case 20..<30:
-            return 2
-        case 30..<40:
-            return 3
-        case 40..<50:
-            return 4
-        case 50..<60:
-            return 5
-        case 60..<70:
-            return 6
-        case 70..<80:
-            return 7
-        case 80..<90:
-            return 8
-        case 90..<100:
-            return 9
-        default:        // 과연 나머지 처리를 이렇게 하는 것이 맞을까?
+        } else if total / 10 >= 10 {
             return 10
+        } else {
+            return totalDividedByTen
         }
     }
     
