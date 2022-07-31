@@ -24,6 +24,8 @@ enum StoryboardType: String {
 }
 
 struct StoryboardManager {
+    private init() {}
+    
     static func instantiateViewController<T>(_ storyboardType: StoryboardType, for type: T.Type) -> T? {
         guard let viewController = storyboardType.storyboard.instantiateViewController(withIdentifier: storyboardType.identifier) as? T else {
             fatalError()
