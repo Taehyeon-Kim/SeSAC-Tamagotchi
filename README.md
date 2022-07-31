@@ -13,3 +13,4 @@
 - 코드 컨벤션에 대한 고민(https://github.com/Taehyeon-Kim/Tamagotchi/issues/37)
 - 레벨 계산 로직 코드 개선(https://github.com/Taehyeon-Kim/Tamagotchi/issues/38)
 - StoryboardManager 부분에 대한 고민(https://github.com/Taehyeon-Kim/Tamagotchi/issues/39)
+- 타입 명시와 타입 추론에 대한 고민(https://github.com/Taehyeon-Kim/Tamagotchi/issues/40)
