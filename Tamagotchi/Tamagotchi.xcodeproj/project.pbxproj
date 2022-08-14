@@ -29,7 +29,7 @@
 		BDFFE3BA288D46D0002F75D9 /* TamagotchiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3B9288D46D0002F75D9 /* TamagotchiCollectionViewCell.swift */; };
 		BDFFE3BC288D4DC5002F75D9 /* TamagotchiType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3BB288D4DC5002F75D9 /* TamagotchiType.swift */; };
 		BDFFE3C0288D77BE002F75D9 /* CustomPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3BF288D77BE002F75D9 /* CustomPaddingLabel.swift */; };
-		BDFFE3C3288D7A1B002F75D9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3C2288D7A1B002F75D9 /* Color.swift */; };
+		BDFFE3C3288D7A1B002F75D9 /* Pallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3C2288D7A1B002F75D9 /* Pallete.swift */; };
 		BDFFE3C6288D947C002F75D9 /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3C5288D947C002F75D9 /* OptionTableViewCell.swift */; };
 		BDFFE3CA288D9C4A002F75D9 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3C9288D9C4A002F75D9 /* UITextField+Extension.swift */; };
 		BDFFE3CE288DA9C6002F75D9 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFE3CD288DA9C6002F75D9 /* UIViewController+Extension.swift */; };
@@ -63,7 +63,7 @@
 		BDFFE3B9288D46D0002F75D9 /* TamagotchiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagotchiCollectionViewCell.swift; sourceTree = "<group>"; };
 		BDFFE3BB288D4DC5002F75D9 /* TamagotchiType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagotchiType.swift; sourceTree = "<group>"; };
 		BDFFE3BF288D77BE002F75D9 /* CustomPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPaddingLabel.swift; sourceTree = "<group>"; };
-		BDFFE3C2288D7A1B002F75D9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		BDFFE3C2288D7A1B002F75D9 /* Pallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pallete.swift; sourceTree = "<group>"; };
 		BDFFE3C5288D947C002F75D9 /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
 		BDFFE3C9288D9C4A002F75D9 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		BDFFE3CD288DA9C6002F75D9 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -276,7 +276,7 @@
 		BDFFE3D9288E7C0D002F75D9 /* NameSpace */ = {
 			isa = PBXGroup;
 			children = (
-				BDFFE3C2288D7A1B002F75D9 /* Color.swift */,
+				BDFFE3C2288D7A1B002F75D9 /* Pallete.swift */,
 			);
 			path = NameSpace;
 			sourceTree = "<group>";
@@ -423,7 +423,7 @@
 				BDFFE3C6288D947C002F75D9 /* OptionTableViewCell.swift in Sources */,
 				BD7E0AF8288B98CE000C31DF /* SelectViewController.swift in Sources */,
 				BDFFE3DF288E7D6C002F75D9 /* StoryboardManager.swift in Sources */,
-				BDFFE3C3288D7A1B002F75D9 /* Color.swift in Sources */,
+				BDFFE3C3288D7A1B002F75D9 /* Pallete.swift in Sources */,
 				BD7E0AF0288B98A3000C31DF /* DetailViewController.swift in Sources */,
 				BDFFE3C0288D77BE002F75D9 /* CustomPaddingLabel.swift in Sources */,
 				BD7E0AFE288BA1BD000C31DF /* Tamagotchi.swift in Sources */,

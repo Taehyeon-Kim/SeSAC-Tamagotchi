@@ -78,7 +78,7 @@ extension MainViewController {
     }
     
     private func configureUI() {
-        self.view.backgroundColor = Color.backgroundColor
+        self.view.backgroundColor = Pallete.backgroundColor
         self.configureLabels()
         self.configureTextFields()
         self.configureButtons()
@@ -86,15 +86,15 @@ extension MainViewController {
     }
     
     private func configureLabels() {
-        self.messageLabel.textColor = Color.pointColor
+        self.messageLabel.textColor = Pallete.pointColor
         self.messageLabel.font = .boldSystemFont(ofSize: 13)
-        self.nameLabel.textColor = Color.pointColor
+        self.nameLabel.textColor = Pallete.pointColor
         self.nameLabel.font = .boldSystemFont(ofSize: 13)
-        self.nameLabel.backgroundColor = Color.backgroundColor
-        self.nameLabel.makeRoundedWithBorder(radius: 4, color: Color.pointColor)
+        self.nameLabel.backgroundColor = Pallete.backgroundColor
+        self.nameLabel.makeRoundedWithBorder(radius: 4, color: Pallete.pointColor)
         self.nameLabel.padding(top: 6, bottom: 6, left: 8, right: 8)
         self.statusLabel.font = .boldSystemFont(ofSize: 12)
-        self.statusLabel.textColor = Color.pointColor
+        self.statusLabel.textColor = Pallete.pointColor
     }
     
     private func configureTextFields() {
@@ -109,8 +109,8 @@ extension MainViewController {
     
     private func configureButtons() {
         [self.riceButton, self.waterDropButton].forEach {
-            $0?.setTitleColor(Color.pointColor, for: .normal)
-            $0?.makeRoundedWithBorder(radius: 4, color: Color.pointColor)
+            $0?.setTitleColor(Pallete.pointColor, for: .normal)
+            $0?.makeRoundedWithBorder(radius: 4, color: Pallete.pointColor)
         }
     }
     

@@ -59,7 +59,7 @@ extension SettingViewController {
 
 extension SettingViewController {
     private func configureUI() {
-        self.view.backgroundColor = Color.backgroundColor
+        self.view.backgroundColor = Pallete.backgroundColor
     }
     
     private func configureNavigationBar() {
@@ -69,11 +69,11 @@ extension SettingViewController {
     private func configureCell(_ cell: UITableViewCell, indexPath: IndexPath) {
         cell.selectionStyle = .none
         cell.backgroundColor = .clear
-        cell.imageView?.tintColor = Color.pointColor
+        cell.imageView?.tintColor = Pallete.pointColor
         cell.imageView?.image = SettingOptionType.allCases[indexPath.row].image
         cell.textLabel?.text = SettingOptionType.allCases[indexPath.row].title
         cell.detailTextLabel?.text = SettingOptionType.allCases[indexPath.row].detail
-        cell.detailTextLabel?.textColor = Color.pointColor
+        cell.detailTextLabel?.textColor = Pallete.pointColor
     }
     
     private func changeRootViewController() {

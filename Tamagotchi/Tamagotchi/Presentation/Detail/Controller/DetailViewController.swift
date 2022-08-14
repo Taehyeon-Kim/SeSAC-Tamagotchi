@@ -55,27 +55,27 @@ extension DetailViewController {
     }
     
     private func configureContainerView() {
-        self.containerView.backgroundColor = Color.backgroundColor
+        self.containerView.backgroundColor = Pallete.backgroundColor
         self.containerView.layer.cornerRadius = 8
     }
     
     private func configureLabels() {
         self.nameLabel.font = .boldSystemFont(ofSize: 13)
-        self.nameLabel.textColor = Color.pointColor
+        self.nameLabel.textColor = Pallete.pointColor
         self.nameLabel.padding(top: 6, bottom: 6, left: 8, right: 8)
-        self.nameLabel.makeRoundedWithBorder(radius: 4, color: Color.pointColor)
+        self.nameLabel.makeRoundedWithBorder(radius: 4, color: Pallete.pointColor)
         
         self.descriptionLabel.font = .systemFont(ofSize: 12)
-        self.descriptionLabel.textColor = Color.pointColor
+        self.descriptionLabel.textColor = Pallete.pointColor
     }
 
     private func configureButtons() {
         self.startButton.setTitle(type?.buttonTitle, for: .normal)
-        self.startButton.setTitleColor(Color.pointColor, for: .normal)
-        self.startButton.makeBorder(color: Color.pointColor, borderWith: 0.5)
+        self.startButton.setTitleColor(Pallete.pointColor, for: .normal)
+        self.startButton.makeBorder(color: Pallete.pointColor, borderWith: 0.5)
         
-        self.cancelButton.setTitleColor(Color.pointColor, for: .normal)
-        self.cancelButton.makeBorder(color: Color.pointColor, borderWith: 0.5)
+        self.cancelButton.setTitleColor(Pallete.pointColor, for: .normal)
+        self.cancelButton.makeBorder(color: Pallete.pointColor, borderWith: 0.5)
     }
     
     private func configureData() {

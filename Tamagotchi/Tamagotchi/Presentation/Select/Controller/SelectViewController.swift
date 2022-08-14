@@ -30,7 +30,7 @@ final class SelectViewController: UICollectionViewController {
 extension SelectViewController {
     
     private func configureUI() {
-        self.view.backgroundColor = Color.backgroundColor
+        self.view.backgroundColor = Pallete.backgroundColor
         self.configureNavigationBar()
     }
     

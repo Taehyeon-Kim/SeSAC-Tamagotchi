@@ -20,9 +20,9 @@ final class TamagotchiCollectionViewCell: UICollectionViewCell {
     
     private func configureUI() {
         self.nameLabel.font = .boldSystemFont(ofSize: 11)
-        self.nameLabel.textColor = Color.pointColor
-        self.nameLabel.backgroundColor = Color.backgroundColor
-        self.nameLabel.makeRoundedWithBorder(radius: 4, color: Color.pointColor)
+        self.nameLabel.textColor = Pallete.pointColor
+        self.nameLabel.backgroundColor = Pallete.backgroundColor
+        self.nameLabel.makeRoundedWithBorder(radius: 4, color: Pallete.pointColor)
         self.nameLabel.padding(top: 8, bottom: 8, left: 6, right: 6)
     }
     

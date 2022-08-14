@@ -36,11 +36,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func configureNavigationBar() {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = Color.backgroundColor
-        appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: Color.pointColor]
+        appearance.backgroundColor = Pallete.backgroundColor
+        appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: Pallete.pointColor]
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
-        UINavigationBar.appearance().tintColor = Color.pointColor
+        UINavigationBar.appearance().tintColor = Pallete.pointColor
     }
     
     private func configureKeyboard() {

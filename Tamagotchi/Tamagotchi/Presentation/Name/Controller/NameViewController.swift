@@ -29,7 +29,7 @@ final class NameViewController: UIViewController {
 extension NameViewController {
     
     private func configureUI() {
-        self.view.backgroundColor = Color.backgroundColor
+        self.view.backgroundColor = Pallete.backgroundColor
         self.configureTextField()
         self.configureNavigationBar()
     }
@@ -37,7 +37,7 @@ extension NameViewController {
     private func configureTextField() {
         self.nameTextField.placeholder = "\(UserDefaultManager.nickname)님 이름을 입력해주세요!"
         self.nameTextField.text = UserDefaultManager.nickname
-        self.nameTextField.textColor = Color.pointColor
+        self.nameTextField.textColor = Pallete.pointColor
         self.nameTextField.drawUnderLine()
     }
     
