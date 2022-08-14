@@ -27,7 +27,7 @@ struct UserDefaultWrapper<T> {
     }
 }
 
-enum UserDefaultKey: String {
+enum UserDefaultKey: String, CaseIterable {
     case isAppFirstLaunch
     case characterType
     case nickname
@@ -58,4 +58,13 @@ struct UserDefaultManager {
     
     @UserDefaultWrapper(key: UserDefaultKey.waterdrop.rawValue, defaultValue: 0)
     static var waterdrop: Double
+}
+
+extension UserDefaultManager {
+    
+    static func reset() {
+        UserDefaultKey.allCases.forEach { key in
+            UserDefaults.standard.removeObject(forKey: key.rawValue)
+        }
+    }
 }
